@@ -31,6 +31,22 @@ async function getData() {
       });
     };
 
+    const searchInputMobile = document.querySelector("#barMobile");
+    searchInputMobile.onkeyup = function () {
+      let filteredArtists = artists.filter((artist) => {
+        return artist.albumName
+          .toLowerCase()
+          .includes(this.value.toLowerCase());
+      });
+
+      containerOne.innerHTML = "";
+      containerTwo.innerHTML = "";
+
+      filteredArtists.forEach((artist) => {
+        writeHtmlToDom(containerOne, artist);
+        writeHtmlToDom(containerTwo, artist);
+      });
+    };
 
     /* ------------------------------------------ HideLoader ---------------------------------------------- */
     const loaderContent = document.querySelector(".loader");
