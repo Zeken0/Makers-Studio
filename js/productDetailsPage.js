@@ -15,6 +15,8 @@ async function getPosts(postId) {
       "https://highart.herokuapp.com/Artists/" + postId
     );
     const data = await repsonse.json();
+    const charactersElm = document.querySelector('.characters');
+		let characterHTML = '';
 
     document.title += `
                 ${data.albumName}
