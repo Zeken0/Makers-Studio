@@ -31,7 +31,6 @@ async function getData() {
       });
     };
 
-
     /* ------------------------------------------ HideLoader ---------------------------------------------- */
     const loaderContent = document.querySelector(".loader");
 
