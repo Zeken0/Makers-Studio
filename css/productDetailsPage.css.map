@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/partials/productDetailsPage.scss"
+    ],
+    "names": [],
+    "file": "productDetailsPage.css"
+}
