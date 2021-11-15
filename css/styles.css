@@ -12,10 +12,6 @@ body {
   height: 100vh;
 }
 
-main {
-  height: 100%;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,7 +25,53 @@ header {
   width: 90%;
   margin: auto;
   height: 4rem;
-  background-color: red;
+  background-color: transparent;
+  border: solid red 1px;
+}
+
+header .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  border: solid red 1px;
+}
+
+header .hamburger {
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: black;
+  border: 0;
+  cursor: pointer;
+  display: none;
+}
+
+header .menu {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header a {
+  color: black !important;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+}
+
+header a:hover {
+  border-radius: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  border: solid red 1px;
 }
 
 footer {

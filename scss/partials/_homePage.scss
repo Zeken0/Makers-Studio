@@ -11,10 +11,6 @@ body {
   height: 100vh;
 }
 
-main {
-  height: 100%;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -22,7 +18,48 @@ header {
   width: 90%;
   margin: auto;
   height: 4rem;
-  background-color: red;
+  background-color: transparent;
+  border: solid red 1px;
+
+  .logo {
+    width: fit-content;
+    cursor: pointer;
+    border: solid red 1px;
+  }
+
+  .hamburger {
+    background-color: transparent;
+    font-size: 1.8rem;
+    color: black;
+    border: 0;
+    cursor: pointer;
+    display: none;
+  }
+
+  .menu {
+    width: fit-content;
+  }
+
+  a {
+    color: black !important;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    border-radius: 3px;
+    transition: 0.2s;
+  }
+}
+
+main {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  border: solid red 1px;
 }
 
 footer {
