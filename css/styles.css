@@ -1,5 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90%;
   margin: auto;
+  height: 4rem;
+  background-color: red;
+}
+
+footer {
+  background-color: black;
+  height: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */
