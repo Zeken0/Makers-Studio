@@ -1,8 +1,8 @@
-import writeHtmlToDom from './utils/writeHtmlToDom.js';
+import writeHtmlToDom from "./utils/writeHtmlToDom.js";
 import {
-	getFromLocalStorage,
-	saveToLocalStorage,
-} from './utils/localHelpers.js';
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "./utils/localHelpers.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -12,11 +12,11 @@ async function getPosts(postId) {
   try {
     console.log(postId);
     const repsonse = await fetch(
-      "https://highart.herokuapp.com/Artists/" + postId
+      "https://makers-studio.herokuapp.com/Products/" + postId
     );
     const data = await repsonse.json();
-    const charactersElm = document.querySelector('.characters');
-		let characterHTML = '';
+    const charactersElm = document.querySelector(".characters");
+    let characterHTML = "";
 
     document.title += `
                 ${data.albumName}
@@ -42,41 +42,41 @@ async function getPosts(postId) {
                 </div>
             `;
 
-            writeHtmlToDom(charactersElm, characterHTML);
+    writeHtmlToDom(charactersElm, characterHTML);
 
-		let hearts = document.querySelectorAll('.fa-heart');
+    let hearts = document.querySelectorAll(".fa-heart");
 
-		hearts.forEach((singleHeart) => {
-			singleHeart.onclick = () => {
-				singleHeart.classList.toggle('fas');
+    hearts.forEach((singleHeart) => {
+      singleHeart.onclick = () => {
+        singleHeart.classList.toggle("fas");
 
-				let character = {
-					id: singleHeart.dataset.id,
-					img: singleHeart.dataset.img,
-					nickname: singleHeart.dataset.nickname,
-					birthday: singleHeart.dataset.birthday,
-				};
+        let character = {
+          id: singleHeart.dataset.id,
+          img: singleHeart.dataset.img,
+          nickname: singleHeart.dataset.nickname,
+          birthday: singleHeart.dataset.birthday,
+        };
 
-				let favourites = getFromLocalStorage('favourites');
+        let favourites = getFromLocalStorage("favourites");
 
-				// find
-				let isInStorage = favourites.find((singleFavourite) => {
-					return singleFavourite.id === singleHeart.dataset.id;
-				});
+        // find
+        let isInStorage = favourites.find((singleFavourite) => {
+          return singleFavourite.id === singleHeart.dataset.id;
+        });
 
-				if (isInStorage === undefined) {
-					favourites.push(character);
-					saveToLocalStorage('favourites', favourites);
-				} else {
-					// if the singleFavourite.id is the same as singleHeart.dataset.id do not add it to the array
-					let removedFavouritesArray = favourites.filter((singleFavourite) => {
-						return singleFavourite.id !== singleHeart.dataset.id;
-					});
+        if (isInStorage === undefined) {
+          favourites.push(character);
+          saveToLocalStorage("favourites", favourites);
+        } else {
+          // if the singleFavourite.id is the same as singleHeart.dataset.id do not add it to the array
+          let removedFavouritesArray = favourites.filter((singleFavourite) => {
+            return singleFavourite.id !== singleHeart.dataset.id;
+          });
 
-					saveToLocalStorage('favourites', removedFavouritesArray);
-				}
-			};
-		});
+          saveToLocalStorage("favourites", removedFavouritesArray);
+        }
+      };
+    });
 
     /* ------------------------------------------ hideLoader ---------------------------------------------- */
     const loaderContent = document.querySelector(".loader");

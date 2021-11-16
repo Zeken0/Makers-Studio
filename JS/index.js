@@ -5,7 +5,9 @@ let containerTwo = document.querySelector(".containerTwo");
 
 async function getData() {
   try {
-    const repsonse = await fetch("https://highart.herokuapp.com/Artists/");
+    const repsonse = await fetch(
+      "https://makers-studio.herokuapp.com/Products/"
+    );
     const data = await repsonse.json();
     let artists = data;
 
