@@ -1,0 +1,13 @@
+@mixin headerText {
+  font-family: futura pt, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.1875rem;
+}
+
+@mixin normalText {
+  font-family: proxima nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+}
