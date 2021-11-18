@@ -13,6 +13,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+nav {
+  border: solid red 1px;
+  margin-bottom: 1rem;
+}
+
 nav .navbar {
   width: 90% !important;
   margin: auto !important;
@@ -32,6 +37,7 @@ main {
 }
 
 footer {
+  margin-top: 1rem;
   background-color: black;
   height: 4rem;
 }

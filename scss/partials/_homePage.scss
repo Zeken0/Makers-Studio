@@ -12,7 +12,11 @@ body {
   font-family: $primary-font;
 }
 
+/* ----------------------------------------------------- Header -------------------------------------------- */
 nav {
+  border: solid red 1px;
+  margin-bottom: 1rem;
+
   .navbar {
     width: 90% !important;
     margin: auto !important;
@@ -24,14 +28,16 @@ nav {
   }
 }
 
+/* ----------------------------------------------------- Main ---------------------------------------------- */
 main {
   height: 100%;
   width: 90%;
   margin: auto;
   border: solid red 1px;
 }
-
+/* ----------------------------------------------------- Footer --------------------------------------------- */
 footer {
+  margin-top: 1rem;
   background-color: black;
   height: 4rem;
 }
