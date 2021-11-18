@@ -10,52 +10,17 @@ body {
   background-color: $secondary-color;
   height: 100vh;
   font-family: $primary-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-  height: 4rem;
-  background-color: transparent;
-  border: solid red 1px;
-
-  .logo {
-    width: fit-content;
-    cursor: pointer;
-    border: solid red 1px;
+nav {
+  .navbar {
+    width: 90% !important;
+    margin: auto !important;
   }
-
-  .hamburger {
-    background-color: transparent;
-    font-size: 1.8rem;
-    color: black;
-    border: 0;
-    cursor: pointer;
-    display: none;
+  .container-fluid {
   }
-
-  .menu {
-    width: fit-content;
-  }
-
-  a {
-    color: black !important;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 20px 20px 20px 20px;
-    text-decoration: none;
-  }
-
-  a:hover {
-    border-radius: 3px;
-    transition: 0.2s;
+  .navbar-collapse {
+    flex-grow: unset;
   }
 }
 
@@ -69,4 +34,12 @@ main {
 footer {
   background-color: black;
   height: 4rem;
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) /*Tablet*/ {
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) /*Mobile*/ {
 }

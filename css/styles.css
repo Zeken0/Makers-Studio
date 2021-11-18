@@ -11,64 +11,17 @@ body {
   background-color: #fafafa;
   height: 100vh;
   font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-  margin: auto;
-  height: 4rem;
-  background-color: transparent;
-  border: solid red 1px;
+nav .navbar {
+  width: 90% !important;
+  margin: auto !important;
 }
 
-header .logo {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  border: solid red 1px;
-}
-
-header .hamburger {
-  background-color: transparent;
-  font-size: 1.8rem;
-  color: black;
-  border: 0;
-  cursor: pointer;
-  display: none;
-}
-
-header .menu {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-header a {
-  color: black !important;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding: 20px 20px 20px 20px;
-  text-decoration: none;
-}
-
-header a:hover {
-  border-radius: 3px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+nav .navbar-collapse {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
 }
 
 main {
@@ -82,4 +35,7 @@ footer {
   background-color: black;
   height: 4rem;
 }
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
 /*# sourceMappingURL=styles.css.map */
