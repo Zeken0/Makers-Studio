@@ -1,37 +1,14 @@
 import writeHtmlToDom from "./libs/writeHtmlToDom.js";
 
-let containerOne = document.querySelector(".container");
-let containerTwo = document.querySelector(".containerTwo");
-
-async function getData() {
+async function getHeroBannerData() {
   try {
-    const repsonse = await fetch(
-      "https://makers-studio.herokuapp.com/Products/"
-    );
+    const repsonse = await fetch("https://makers-studio.herokuapp.com/home/");
     const data = await repsonse.json();
-    let artists = data;
+    let heroData = data;
 
-    artists.forEach((artist) => {
-      writeHtmlToDom(containerOne, artist);
-      writeHtmlToDom(containerTwo, artist);
-    });
-
-    const searchInput = document.querySelector("#bar");
-    searchInput.onkeyup = function () {
-      let filteredArtists = artists.filter((artist) => {
-        return artist.albumName
-          .toLowerCase()
-          .includes(this.value.toLowerCase());
-      });
-
-      containerOne.innerHTML = "";
-      containerTwo.innerHTML = "";
-
-      filteredArtists.forEach((artist) => {
-        writeHtmlToDom(containerOne, artist);
-        writeHtmlToDom(containerTwo, artist);
-      });
-    };
+    document.querySelector(".heroBanner-Image").innerHTML += `
+      <img src="${heroData.Hero_banner_url}" alt="${heroData.Hero_banner_alt_text}">
+      `;
 
     /* ------------------------------------------ HideLoader ---------------------------------------------- */
     const loaderContent = document.querySelector(".loader");
@@ -52,4 +29,4 @@ async function getData() {
     }, 3000);
   }
 }
-getData();
+getHeroBannerData();
