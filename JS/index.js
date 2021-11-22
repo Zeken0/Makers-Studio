@@ -40,7 +40,7 @@ async function getFeaturedArtworksData() {
     let featuredData = data;
 
     featuredData.forEach((artwork) => {
-      let desiredArtwork = ${artwork.Title};
+      // let desiredArtwork = ${artwork.Title};
 
       document.querySelector(".featured-products-artwork").innerHTML += `
       <div class="featured-products-artwork-single">
