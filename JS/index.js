@@ -40,15 +40,15 @@ async function getFeaturedArtworksData() {
     let featuredData = data;
 
     featuredData.forEach((artwork) => {
-      // let desiredArtwork = ${artwork.Title};
-
-      document.querySelector(".featured-products-artwork").innerHTML += `
-      <div class="featured-products-artwork-single">
-      <img src="${artwork.Image_url}" alt="an image of a painting">
-      <h3>${artwork.Title}</h3>
-      <h4>${artwork.Price}$</h4>
-      </div>
+      if (artwork.Featured === true) {
+        document.querySelector(".featured-products-artwork").innerHTML += `
+          <div class="featured-products-artwork-single">
+            <img src="${artwork.Image_url}" alt="an image of a painting">
+            <h3>${artwork.Title}</h3>
+            <h4>${artwork.Price}$</h4>
+          </div>
         `;
+      }
     });
 
     /* ------------------------------------------ HideLoader ---------------------------------------------- */

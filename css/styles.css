@@ -24,6 +24,11 @@ nav .navbar-collapse {
           flex-grow: unset;
 }
 
+nav i {
+  font-size: 0.8rem;
+  margin-left: 0.1rem;
+}
+
 .herobanner {
   margin-bottom: 1rem;
   display: -webkit-box;
@@ -54,6 +59,14 @@ nav .navbar-collapse {
   width: 65%;
 }
 
+.herobanner .heroBanner-nav .heroBanner-nav-group button {
+  width: 100%;
+  height: 3rem;
+  border-radius: 3px;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
 .herobanner .heroBanner-Image {
   width: 44.5%;
 }
@@ -67,7 +80,7 @@ main {
   height: 100%;
   width: 95%;
   margin: auto;
-  border: solid red 1px;
+  margin-top: 5rem;
 }
 
 main .featured-products {
@@ -101,6 +114,7 @@ main .featured-products .featured-products-artwork .featured-products-artwork-si
       -ms-flex-direction: column;
           flex-direction: column;
   width: 24.09%;
+  cursor: pointer;
 }
 
 /* ----------------------------------------------------- Footer --------------------------------------------- */
@@ -134,11 +148,15 @@ footer {
   }
 }
 
-.featured-products-artwork-single {
+.featured-products-artwork {
+  row-gap: 3rem !important;
+}
+
+.featured-products-artwork .featured-products-artwork-single {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
