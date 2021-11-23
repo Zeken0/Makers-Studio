@@ -1,6 +1,6 @@
 main {
   .productsMain {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
@@ -49,16 +49,20 @@ main {
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) /*Mobile*/ {
   main {
-    #bar {
-      width: 100% !important;
-      height: 2.5rem !important;
-    }
-
-    .products-artworks {
-      flex-direction: column;
-
-      .products-artwork-single {
+    .productsMain {
+      row-gap: 1.5rem;
+      #bar {
         width: 100% !important;
+        height: 2.5rem !important;
+      }
+
+      .products-artworks {
+        flex-direction: column;
+        row-gap: 2.5rem !important;
+
+        .products-artwork-single {
+          width: 100% !important;
+        }
       }
     }
   }

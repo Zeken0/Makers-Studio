@@ -264,7 +264,7 @@ footer .footer-nav li {
 }
 
 main .productsMain {
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,17 +324,21 @@ main .productsMain .products-artworks .products-artwork-single img {
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {
-  main #bar {
+  main .productsMain {
+    row-gap: 1.5rem;
+  }
+  main .productsMain #bar {
     width: 100% !important;
     height: 2.5rem !important;
   }
-  main .products-artworks {
+  main .productsMain .products-artworks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    row-gap: 2.5rem !important;
   }
-  main .products-artworks .products-artwork-single {
+  main .productsMain .products-artworks .products-artwork-single {
     width: 100% !important;
   }
 }
