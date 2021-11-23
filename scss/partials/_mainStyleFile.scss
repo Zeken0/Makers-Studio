@@ -156,8 +156,16 @@ footer {
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) /*Tablet*/ {
-  .featured-products-artwork-single {
-    width: 48.9% !important;
+  nav {
+    padding: 0 0rem 0 0.4rem !important;
+  }
+
+  main {
+    margin-bottom: 5rem;
+
+    .featured-products-artwork-single {
+      width: 48.9% !important;
+    }
   }
 }
 

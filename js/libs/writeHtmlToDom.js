@@ -8,7 +8,7 @@ export default function writeHtmlToDom(
             <img src="${htmlToInsertIntoTheDom.Image_url}" alt="an image of a painting"/>
         </a>
         <h3>${htmlToInsertIntoTheDom.Title}</h3>
-        <h4>${htmlToInsertIntoTheDom.Price}$</h4>
+        <h4>${htmlToInsertIntoTheDom.Price}.00$</h4>
     </div>
     `;
 }
