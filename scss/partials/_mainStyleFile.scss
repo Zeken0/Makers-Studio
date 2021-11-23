@@ -168,7 +168,7 @@ footer {
 
     .navbar-brand {
       img {
-        width: 12rem;
+        width: 13rem;
       }
     }
   }
@@ -192,6 +192,7 @@ footer {
   }
 
   main {
+    width: 90%;
     margin-bottom: 5rem;
     .featured-products-artwork {
       row-gap: 3rem !important;

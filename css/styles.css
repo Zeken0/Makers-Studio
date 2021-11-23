@@ -223,7 +223,7 @@ footer .footer-nav li {
     padding: 0 0rem 0 0rem;
   }
   nav .navbar-brand img {
-    width: 12rem;
+    width: 13rem;
   }
   .herobanner {
     -webkit-box-orient: vertical;
@@ -244,6 +244,7 @@ footer .footer-nav li {
     width: 100% !important;
   }
   main {
+    width: 90%;
     margin-bottom: 5rem;
   }
   main .featured-products-artwork {
@@ -322,7 +323,7 @@ main .productsMain .products-artworks .products-artwork-single img {
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {
   main #bar {
-    width: 90% !important;
+    width: 100% !important;
   }
   main .products-artworks {
     -webkit-box-orient: vertical;
