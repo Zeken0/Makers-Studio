@@ -5,16 +5,19 @@ main {
     flex-direction: column;
     row-gap: 3rem;
 
-    #bar {
-      width: 30%;
-      height: 2rem;
-      background-color: whitesmoke;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      padding: 0 10px 0 10px;
-      font-weight: 500;
-      border-radius: 3px 0 0 3px;
+    .search {
+      #bar {
+        width: 30%;
+        height: 2.5rem;
+        background-color: whitesmoke;
+        border: none;
+        outline: none;
+        font-size: 0.9rem;
+        padding: 0 12px 0 12px;
+        font-weight: 500;
+        border-radius: 3px 0 0 3px;
+        box-shadow: 0 2px 2px -2.3px rgba(0, 0, 0, 0.4);
+      }
     }
 
     .products-artworks {
@@ -48,6 +51,7 @@ main {
   main {
     #bar {
       width: 100% !important;
+      height: 2.5rem !important;
     }
 
     .products-artworks {

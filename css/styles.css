@@ -14,7 +14,7 @@ body {
 
 /* ----------------------------------------------------- Header -------------------------------------------- */
 nav {
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0 1rem 0 1rem;
   z-index: 10;
   -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
@@ -275,16 +275,18 @@ main .productsMain {
   row-gap: 3rem;
 }
 
-main .productsMain #bar {
+main .productsMain .search #bar {
   width: 30%;
-  height: 2rem;
+  height: 2.5rem;
   background-color: whitesmoke;
   border: none;
   outline: none;
-  font-size: 1rem;
-  padding: 0 10px 0 10px;
+  font-size: 0.9rem;
+  padding: 0 12px 0 12px;
   font-weight: 500;
   border-radius: 3px 0 0 3px;
+  -webkit-box-shadow: 0 2px 2px -2.3px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 2px -2.3px rgba(0, 0, 0, 0.4);
 }
 
 main .productsMain .products-artworks {
@@ -324,6 +326,7 @@ main .productsMain .products-artworks .products-artwork-single img {
 @media (max-width: 767px) {
   main #bar {
     width: 100% !important;
+    height: 2.5rem !important;
   }
   main .products-artworks {
     -webkit-box-orient: vertical;
