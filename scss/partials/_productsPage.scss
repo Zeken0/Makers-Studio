@@ -1,6 +1,6 @@
 main {
   .productsMain {
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
@@ -58,7 +58,7 @@ main {
 
       .products-artworks {
         flex-direction: column;
-        row-gap: 2.5rem !important;
+        row-gap: 3rem !important;
 
         .products-artwork-single {
           width: 100% !important;

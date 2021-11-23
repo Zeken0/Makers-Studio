@@ -264,7 +264,7 @@ footer .footer-nav li {
 }
 
 main .productsMain {
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,7 +336,7 @@ main .productsMain .products-artworks .products-artwork-single img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 2.5rem !important;
+    row-gap: 3rem !important;
   }
   main .productsMain .products-artworks .products-artwork-single {
     width: 100% !important;
