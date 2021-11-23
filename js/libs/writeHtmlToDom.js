@@ -3,21 +3,12 @@ export default function writeHtmlToDom(
   htmlToInsertIntoTheDom
 ) {
   theDomElementToTarget.innerHTML += `
-    <div class="content">
-        <a href="/details-page.html?id=${htmlToInsertIntoTheDom.id}">
-            <h1>
-                ${htmlToInsertIntoTheDom.albumName}
-            </h1>
+    <div class="products-artwork-single">
+        <a href="/productDetailsPage.html?id=${htmlToInsertIntoTheDom.id}">
+            <img src="${htmlToInsertIntoTheDom.Image_url}" alt="an image of a painting"/>
         </a>
-        <h2>
-            ${htmlToInsertIntoTheDom.artistName}  <i class="fas fa-user"></i>
-        </h2>
-        <p>
-            ${htmlToInsertIntoTheDom.startReview}
-        </p>
-        <a href="/details-page.html?id=${htmlToInsertIntoTheDom.id}">
-            <img src="${htmlToInsertIntoTheDom.albumCoverUrl}" alt="Image of an album cover"/>
-        </a>
+        <h3>${htmlToInsertIntoTheDom.Title}</h3>
+        <h4>${htmlToInsertIntoTheDom.Price}$</h4>
     </div>
     `;
 }

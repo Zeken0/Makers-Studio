@@ -1,52 +1,29 @@
 import writeHtmlToDom from "./libs/writeHtmlToDom.js";
 
-let containerOne = document.querySelector(".container");
-let containerTwo = document.querySelector(".containerTwo");
+let container = document.querySelector(".products-artworks");
 
-async function getData() {
+async function getAllArtworksData() {
   try {
     const repsonse = await fetch(
       "https://makers-studio.herokuapp.com/Products/"
     );
     const data = await repsonse.json();
-    let artists = data;
+    let artworks = data;
 
-    artists.forEach((artist) => {
-      writeHtmlToDom(containerOne, artist);
-      writeHtmlToDom(containerTwo, artist);
+    artworks.forEach((artwork) => {
+      writeHtmlToDom(container, artwork);
     });
 
     const searchInput = document.querySelector("#bar");
     searchInput.onkeyup = function () {
-      let filteredArtists = artists.filter((artist) => {
-        return artist.albumName
-          .toLowerCase()
-          .includes(this.value.toLowerCase());
+      let filteredArtworks = artworks.filter((artwork) => {
+        return artwork.Title.toLowerCase().includes(this.value.toLowerCase());
       });
 
-      containerOne.innerHTML = "";
-      containerTwo.innerHTML = "";
+      container.innerHTML = "";
 
-      filteredArtists.forEach((artist) => {
-        writeHtmlToDom(containerOne, artist);
-        writeHtmlToDom(containerTwo, artist);
-      });
-    };
-
-    const searchInputMobile = document.querySelector("#barMobile");
-    searchInputMobile.onkeyup = function () {
-      let filteredArtists = artists.filter((artist) => {
-        return artist.albumName
-          .toLowerCase()
-          .includes(this.value.toLowerCase());
-      });
-
-      containerOne.innerHTML = "";
-      containerTwo.innerHTML = "";
-
-      filteredArtists.forEach((artist) => {
-        writeHtmlToDom(containerOne, artist);
-        writeHtmlToDom(containerTwo, artist);
+      filteredArtworks.forEach((artwork) => {
+        writeHtmlToDom(container, artwork);
       });
     };
 
@@ -69,4 +46,4 @@ async function getData() {
     }, 3000);
   }
 }
-getData();
+getAllArtworksData();

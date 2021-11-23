@@ -44,10 +44,11 @@ nav {
 }
 
 .herobanner {
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   display: flex;
   width: 100%;
   background-color: $senary-color;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 
   .heroBanner-nav {
     width: 56%;
@@ -80,7 +81,6 @@ main {
   height: 100%;
   width: 95%;
   margin: auto;
-  margin-top: 5rem;
   margin-bottom: 10rem;
 
   .featured-products {
@@ -97,7 +97,8 @@ main {
       .featured-products-artwork-single {
         display: flex;
         flex-direction: column;
-        width: 24.09%;
+        width: 23.99%;
+
         img {
           cursor: pointer;
         }
@@ -148,6 +149,9 @@ footer {
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) /*Tablet*/ {
+  .featured-products-artwork-single {
+    width: 48.9% !important;
+  }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
@@ -159,25 +163,31 @@ footer {
   .herobanner {
     flex-direction: column-reverse;
     row-gap: 1rem;
-  }
-  .heroBanner-nav {
-    width: 100% !important;
+    box-shadow: none;
 
-    .heroBanner-nav-group {
-      width: 90% !important;
+    .heroBanner-nav {
+      width: 100% !important;
+
+      .heroBanner-nav-group {
+        width: 90% !important;
+      }
+    }
+
+    .heroBanner-Image {
+      width: 100% !important;
     }
   }
 
-  .heroBanner-Image {
-    width: 100% !important;
-  }
-}
+  main {
+    margin-bottom: 5rem;
+    .featured-products-artwork {
+      row-gap: 3rem !important;
+      flex-direction: column;
 
-.featured-products-artwork {
-  row-gap: 3rem !important;
-
-  .featured-products-artwork-single {
-    flex-direction: column;
-    width: 100%;
+      .featured-products-artwork-single {
+        flex-direction: column;
+        width: 100% !important;
+      }
+    }
   }
 }

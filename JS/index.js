@@ -1,5 +1,3 @@
-import writeHtmlToDom from "./libs/writeHtmlToDom.js";
-
 async function getHeroBannerData() {
   try {
     const repsonse = await fetch("https://makers-studio.herokuapp.com/home/");
