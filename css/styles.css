@@ -26,6 +26,25 @@ nav .navbar-collapse {
           flex-grow: unset;
 }
 
+nav .navbar-toggler-icon {
+  background-image: none !important;
+  display: unset;
+  color: #000;
+}
+
+nav .navbar-toggler-icon i {
+  font-size: 1.5rem;
+}
+
+nav .navbar-toggler {
+  border: none;
+}
+
+nav .navbar-toggler:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 nav i {
   font-size: 0.8rem;
   margin-left: 0.1rem;

@@ -21,6 +21,22 @@ nav {
     flex-grow: unset;
   }
 
+  .navbar-toggler-icon {
+    background-image: none !important;
+    display: unset;
+    color: #000;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: unset;
+  }
+
   i {
     font-size: 0.8rem;
     margin-left: 0.1rem;
