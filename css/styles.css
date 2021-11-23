@@ -228,6 +228,9 @@ footer .footer-nav li {
   nav {
     padding: 0 0rem 0 0rem;
   }
+  nav .container-fluid {
+    height: 3.5rem;
+  }
   nav .navbar-brand img {
     width: 13rem;
   }
