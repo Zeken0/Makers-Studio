@@ -213,7 +213,7 @@ footer .footer-nav li {
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) {
   nav {
-    padding: 0.5rem 0rem 0.5rem 0.4rem !important;
+    padding: 0.5rem 0rem 0.5rem 0.5rem !important;
   }
   main {
     margin-bottom: 5rem;
@@ -226,7 +226,7 @@ footer .footer-nav li {
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {
   nav {
-    padding: 0.5rem 0rem 0.5rem 0rem !important;
+    padding: 0.45rem 0rem 0.45rem 0rem !important;
   }
   nav .navbar-brand img {
     width: 13rem;
