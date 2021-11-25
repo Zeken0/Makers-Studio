@@ -45,7 +45,7 @@ async function getFeaturedArtworksData() {
             <img src="${artwork.Image_url}" alt="an image of a painting"/>
           </a>
             <h3>${artwork.Title}</h3>
-            <h4>${artwork.Price}$</h4>
+            <h4>${artwork.Price}.00$</h4>
           </div>
         `;
       }
