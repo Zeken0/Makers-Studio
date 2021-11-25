@@ -351,4 +351,36 @@ main .productsMain .products-artworks .products-artwork-single img {
     width: 100% !important;
   }
 }
+
+main .productsDetailsMain {
+  border: solid red 1px;
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) {
+  .productsDetailsMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) {
+  .productsDetailsMain {
+    border: none !important;
+    row-gap: 1rem;
+  }
+  .productsDetailsMain .productsDetailsMain-left img {
+    width: 100%;
+  }
+  .productsDetailsMain .productsDetailsMain-right {
+    row-gap: 0.5rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

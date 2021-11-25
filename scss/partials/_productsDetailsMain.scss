@@ -1,0 +1,38 @@
+main {
+  .productsDetailsMain {
+    border: solid red 1px;
+    margin-top: 2.5rem;
+    display: flex;
+
+    .productsDetailsMain-left {
+    }
+
+    .productsDetailsMain-right {
+    }
+  }
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) /*Tablet*/ {
+  .productsDetailsMain {
+    flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) /*Mobile*/ {
+  .productsDetailsMain {
+    border: none !important;
+    row-gap: 1rem;
+
+    .productsDetailsMain-left {
+      img {
+        width: 100%;
+      }
+    }
+
+    .productsDetailsMain-right {
+      row-gap: 0.5rem;
+    }
+  }
+}
