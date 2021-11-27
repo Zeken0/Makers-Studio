@@ -5,9 +5,11 @@ main {
     display: flex;
 
     .productsDetailsMain-left {
+      border: solid red 1px;
     }
 
     .productsDetailsMain-right {
+      border: solid red 1px;
     }
   }
 }

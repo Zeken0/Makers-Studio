@@ -360,6 +360,14 @@ main .productsDetailsMain {
   display: flex;
 }
 
+main .productsDetailsMain .productsDetailsMain-left {
+  border: solid red 1px;
+}
+
+main .productsDetailsMain .productsDetailsMain-right {
+  border: solid red 1px;
+}
+
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) {
   .productsDetailsMain {
