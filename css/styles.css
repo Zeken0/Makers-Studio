@@ -358,14 +358,23 @@ main .productsDetailsMain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-main .productsDetailsMain .productsDetailsMain-left {
-  border: solid red 1px;
+  -webkit-column-gap: 10rem;
+          column-gap: 10rem;
 }
 
 main .productsDetailsMain .productsDetailsMain-right {
-  border: solid red 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+
+main .productsDetailsMain .productsDetailsMain-right button {
+  width: 40%;
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */

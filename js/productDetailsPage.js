@@ -22,6 +22,7 @@ async function getSingleArtwork(postId) {
       <h1>${data.Title}</h1>
       <h2>${data.Price}.00$</h2>
       <p>${data.Description}</p>
+      <button>Add To Cart</button>
       </div>
     `;
 
