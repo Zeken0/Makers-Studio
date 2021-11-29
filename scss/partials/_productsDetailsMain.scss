@@ -6,9 +6,11 @@ main {
     column-gap: 10rem;
 
     .productsDetailsMain-left {
+      border: solid green 1px;
     }
 
     .productsDetailsMain-right {
+      border: solid purple 1px;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;

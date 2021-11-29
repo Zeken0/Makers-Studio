@@ -362,7 +362,12 @@ main .productsDetailsMain {
           column-gap: 10rem;
 }
 
+main .productsDetailsMain .productsDetailsMain-left {
+  border: solid green 1px;
+}
+
 main .productsDetailsMain .productsDetailsMain-right {
+  border: solid purple 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
