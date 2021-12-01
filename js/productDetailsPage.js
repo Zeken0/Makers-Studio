@@ -20,9 +20,9 @@ async function getSingleArtwork(postId) {
       </div>
       <div class="productsDetailsMain-right">
       <h1>${data.Title}</h1>
-      <h2>${data.Price}.00$</h2>
+      <span>$${data.Price}.00</span>
       <p>${data.Description}</p>
-      <button>Add To Cart</button>
+      <button class="productsDetailsMain-right-btn">Add To Cart</button>
       </div>
     `;
 

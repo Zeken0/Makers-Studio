@@ -11,3 +11,24 @@
   font-weight: 400;
   font-size: 1rem;
 }
+
+@mixin price {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@mixin button {
+  width: 40%;
+  height: 4rem;
+  background-color: transparent;
+  color: $primary-color;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+@mixin buttonHover {
+  transition: 0.15s;
+  background-color: $primary-color;
+  color: white;
+}

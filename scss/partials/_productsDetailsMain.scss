@@ -1,23 +1,31 @@
 main {
   .productsDetailsMain {
-    border: solid red 1px;
+    border: solid black 1px;
     margin-top: 2.5rem;
     display: flex;
     column-gap: 10rem;
 
     .productsDetailsMain-left {
-      border: solid green 2px;
     }
 
     .productsDetailsMain-right {
-      border: solid purple 2px;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
+
+      span {
+        @include price;
+      }
+
       p {
       }
+
       button {
-        width: 40%;
+        @include button;
+      }
+
+      button:hover {
+        @include buttonHover;
       }
     }
   }
@@ -26,13 +34,19 @@ main {
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) /*Tablet*/ {
   .productsDetailsMain {
-    flex-direction: column;
+    column-gap: 1rem !important;
+    .productsDetailsMain-left {
+      img {
+        height: 27rem;
+      }
+    }
   }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) /*Mobile*/ {
   .productsDetailsMain {
+    flex-direction: column;
     border: none !important;
     row-gap: 1rem;
 
@@ -44,6 +58,10 @@ main {
 
     .productsDetailsMain-right {
       row-gap: 0.5rem;
+
+      button {
+        width: 100% !important;
+      }
     }
   }
 }
