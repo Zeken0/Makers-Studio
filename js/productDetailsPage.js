@@ -1,4 +1,7 @@
-import { saveToLocalStorage } from "./libs/localHelpers.js";
+import {
+  saveToLocalStorage,
+  getFromLocalStorage,
+} from "./libs/localHelpers.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -35,6 +38,8 @@ async function getSingleArtwork(postId) {
     console.log(addToCartButton);
 
     addToCartButton.onclick = () => {
+      // addToCartButton.classList.toggle('fas');
+
       let artwork = {
         id: addToCartButton.dataset.id,
         image: addToCartButton.dataset.image,
@@ -42,11 +47,25 @@ async function getSingleArtwork(postId) {
         price: addToCartButton.dataset.price,
       };
 
-      let allArtworks = [];
-      allArtworks.push(artwork);
-      saveToLocalStorage("cart", allArtworks);
-    };
+      let cartItems = getFromLocalStorage("cart");
 
+      // find
+      let isInStorage = cartItems.find((item) => {
+        return item.id === addToCartButton.dataset.id;
+      });
+
+      if (isInStorage === undefined) {
+        cartItems.push(artwork);
+        saveToLocalStorage("cart", cartItems);
+      } else {
+        // if the singleFavourite.id is the same as singleHeart.dataset.id do not add it to the array
+        let removedcartItemsArray = cartItems.filter((item) => {
+          return item.id !== addToCartButton.dataset.id;
+        });
+
+        saveToLocalStorage("cart", removedcartItemsArray);
+      }
+    };
     /* ------------------------------------------ hideLoader ---------------------------------------------- */
     const loaderContent = document.querySelector(".loader");
 
