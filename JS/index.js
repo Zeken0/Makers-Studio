@@ -4,6 +4,10 @@ async function getHeroBannerData() {
     const data = await repsonse.json();
     let heroData = data;
 
+    document.querySelector(".herobanner-btn").onclick = () => {
+      window.location = "productsPage.html";
+    };
+
     document.querySelector(".heroBanner-Image").innerHTML += `
       <img src="${heroData.Hero_banner_url}" alt="${heroData.Hero_banner_alt_text}">
       `;

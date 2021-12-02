@@ -49,7 +49,6 @@ async function getSingleArtwork(postId) {
 
       let cartItems = getFromLocalStorage("cart");
 
-      // find
       let isInStorage = cartItems.find((item) => {
         return item.id === addToCartButton.dataset.id;
       });
@@ -58,7 +57,6 @@ async function getSingleArtwork(postId) {
         cartItems.push(artwork);
         saveToLocalStorage("cart", cartItems);
       } else {
-        // if the singleFavourite.id is the same as singleHeart.dataset.id do not add it to the array
         let removedcartItemsArray = cartItems.filter((item) => {
           return item.id !== addToCartButton.dataset.id;
         });
