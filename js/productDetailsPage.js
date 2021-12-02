@@ -27,7 +27,7 @@ async function getSingleArtwork(postId) {
       <h1>${artwork.Title}</h1>
       <span>$${artwork.Price}.00</span>
       <p>${artwork.Description}</p>
-      <button class="productsDetailsMain-right-btn" data-id="${artwork.id}" data-image="${artwork.Image_url}" data-name="${artwork.Title}" data-price="$${artwork.Price}.00">Add To Cart</button>
+      <button class="productsDetailsMain-right-btn" data-id="${artwork.id}" data-image="${artwork.Image_url}" data-name="${artwork.Title}" data-price="${artwork.Price}">Add To Cart</button>
       </div>
     `;
 
