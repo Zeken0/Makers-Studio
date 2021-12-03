@@ -9,8 +9,8 @@ for (let i = 0; i < data.length; i++) {
 }
 
 data.forEach((artwork) => {
-  console.log(window.localStorage.value);
-  if (!window.localStorage) {
+  console.log(localStorage.length);
+  if (!localStorage.length === 1) {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">The cart is empty !</div>
     <div class="cart-mid-center">
@@ -22,7 +22,7 @@ data.forEach((artwork) => {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">
     <i class="fas fa-times"></i>
-    <img src="${artwork.image}" alt="">
+    <img src="${artwork.image}" alt="an image of a painting">
     <h2>${artwork.name}</h2>
     </div>
     <div class="cart-mid-center">
