@@ -434,6 +434,13 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   color: white;
 }
 
+.added {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  background-color: #525252 !important;
+  color: white !important;
+}
+
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) {
   .productsDetailsMain {

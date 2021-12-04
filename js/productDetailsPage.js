@@ -36,6 +36,8 @@ async function getSingleArtwork(postId) {
     );
 
     addToCartButton.onclick = () => {
+      addToCartButton.classList.toggle(".added");
+
       let artwork = {
         id: addToCartButton.dataset.id,
         image: addToCartButton.dataset.image,
@@ -58,6 +60,12 @@ async function getSingleArtwork(postId) {
         });
 
         saveToLocalStorage("cart", removedcartItemsArray);
+      }
+
+      if (!isInStorage) {
+        addToCartButton.innerHTML = `Added To Cart`;
+      } else {
+        addToCartButton.innerHTML = `Add To Cart`;
       }
     };
     /* ------------------------------------------ hideLoader ---------------------------------------------- */

@@ -30,7 +30,11 @@ main {
     }
   }
 }
-
+.added {
+  transition: 0.15s;
+  background-color: $primary-color !important;
+  color: white !important;
+}
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) /*Tablet*/ {
   .productsDetailsMain {
