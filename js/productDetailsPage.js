@@ -9,7 +9,6 @@ const id = params.get("id");
 
 async function getSingleArtwork(postId) {
   try {
-    console.log(postId);
     const repsonse = await fetch(
       "https://makers-studio.herokuapp.com/Products/" + postId
     );
@@ -35,11 +34,8 @@ async function getSingleArtwork(postId) {
     let addToCartButton = document.querySelector(
       ".productsDetailsMain-right-btn"
     );
-    console.log(addToCartButton);
 
     addToCartButton.onclick = () => {
-      // addToCartButton.classList.toggle('fas');
-
       let artwork = {
         id: addToCartButton.dataset.id,
         image: addToCartButton.dataset.image,

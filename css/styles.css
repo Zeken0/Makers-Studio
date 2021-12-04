@@ -522,6 +522,15 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   padding-right: 3rem;
 }
 
+.cartMain .cart-mid .cart-mid-left a {
+  text-decoration: none;
+  color: unset;
+}
+
+.cartMain .cart-mid .cart-mid-left i {
+  cursor: pointer;
+}
+
 .cartMain .cart-mid .cart-mid-left img {
   height: 15rem;
 }

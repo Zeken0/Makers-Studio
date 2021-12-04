@@ -1,3 +1,5 @@
+import { getFromLocalStorage } from "./libs/localHelpers.js";
+
 let data = JSON.parse(localStorage.getItem("cart"));
 
 let totalAmount = 0;
@@ -9,7 +11,6 @@ for (let i = 0; i < data.length; i++) {
 }
 
 data.forEach((artwork) => {
-  console.log(localStorage.length);
   if (!localStorage.length === 1) {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">The cart is empty !</div>
@@ -21,9 +22,13 @@ data.forEach((artwork) => {
   } else {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">
-    <i class="fas fa-times"></i>
+    <i class="fas fa-times" data-id="${artwork.id}"></i>
+    <a href="productDetailsPage.html?id=${artwork.id}">
     <img src="${artwork.image}" alt="an image of a painting">
-    <h2>${artwork.name}</h2>
+    </a>
+    <a href="productDetailsPage.html?id=${artwork.id}">
+      <h2>${artwork.name}</h2>
+    </a>
     </div>
     <div class="cart-mid-center">
     <input type="text" aria-label="Quantity" value="-" />
@@ -33,3 +38,14 @@ data.forEach((artwork) => {
     `;
   }
 });
+
+let deleteItemBtn = document.querySelectorAll(".fa-times");
+let cartItems = getFromLocalStorage("cart");
+
+console.log(deleteItemBtn.id);
+let isInStorage = cartItems.find((item) => {
+  return item.id === deleteItemBtn.dataset.id;
+});
+deleteItemBtn.onclick = () => {
+  Storage.removeItem(isInStorage);
+};
