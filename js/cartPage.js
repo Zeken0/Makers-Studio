@@ -14,7 +14,7 @@ for (let i = 0; i < data.length; i++) {
 }
 
 data.forEach((artwork) => {
-  if (artwork === []) {
+  if (artwork === [0]) {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">The cart is empty !</div>
     <div class="cart-mid-center">
