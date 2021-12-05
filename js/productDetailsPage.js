@@ -20,7 +20,7 @@ async function getSingleArtwork(postId) {
             `;
     artworkContainer.innerHTML = `
       <div class="productsDetailsMain-left">
-      <img src="${artwork.Image_url}" alt="image of a painting">
+      <img src="${artwork.Image_url} "  alt="image of a painting" >
       </div>
       <div class="productsDetailsMain-right">
       <h1>${artwork.Title}</h1>

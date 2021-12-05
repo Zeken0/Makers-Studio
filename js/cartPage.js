@@ -1,10 +1,20 @@
-import { getFromLocalStorage } from "./libs/localHelpers.js";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "./libs/localHelpers.js";
 
 let data = getFromLocalStorage("cart");
-console.log(data);
+
+let totalAmount = 0;
+for (let i = 0; i < data.length; i++) {
+  totalAmount += Number(data[i].price);
+  document.querySelector(".total-Price").innerHTML = `
+  $${totalAmount}.00
+  `;
+}
 
 data.forEach((artwork) => {
-  if (data === []) {
+  if (artwork === []) {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">The cart is empty !</div>
     <div class="cart-mid-center">
@@ -15,7 +25,7 @@ data.forEach((artwork) => {
   } else {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">
-    <i class="fas fa-times" data-id="${artwork.id}"></i>
+    <i class="fas fa-times" data-id="${artwork.id}" data-image="${artwork.Image_url}" data-name="${artwork.Title}" data-price="${artwork.Price}"></i>
     <a href="productDetailsPage.html?id=${artwork.id}">
     <img src="${artwork.image}" alt="an image of a painting">
     </a>
@@ -32,18 +42,29 @@ data.forEach((artwork) => {
   }
 });
 
-let totalAmount = 0;
-for (let i = 0; i < data.length; i++) {
-  totalAmount += Number(data[i].price);
-  document.querySelector(".total-Price").innerHTML = `
-  $${totalAmount}.00
-  `;
-}
+let deleteItemBtn = document.querySelectorAll(".fa-times");
 
-// let deleteItemBtn = document.querySelectorAll(".fa-times");
-// let cartItems = getFromLocalStorage("cart");
+deleteItemBtn.forEach((deleteBtn) => {
+  deleteBtn.onclick = () => {
+    window.top.location.reload();
+    let artwork = {
+      id: deleteBtn.dataset.id,
+    };
 
-// let isInStorage = cartItems.find((item) => {
-//   return item.id === deleteItemBtn.dataset.id;
-// });
-// deleteItemBtn.onclick = () => {};
+    let cartItems = getFromLocalStorage("cart");
+
+    let isInStorage = cartItems.find((item) => {
+      return item.id === deleteBtn.dataset.id;
+    });
+
+    if (isInStorage === undefined) {
+      cartItems.push(artwork);
+      saveToLocalStorage("cart", cartItems);
+    } else {
+      let removedcartItemsArray = cartItems.filter((item) => {
+        return item.id !== deleteBtn.dataset.id;
+      });
+      saveToLocalStorage("cart", removedcartItemsArray);
+    }
+  };
+});
