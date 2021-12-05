@@ -54,17 +54,12 @@ async function getSingleArtwork(postId) {
       if (isInStorage === undefined) {
         cartItems.push(artwork);
         saveToLocalStorage("cart", cartItems);
+        addToCartButton.innerHTML = `Added To Cart`;
       } else {
         let removedcartItemsArray = cartItems.filter((item) => {
           return item.id !== addToCartButton.dataset.id;
         });
-
         saveToLocalStorage("cart", removedcartItemsArray);
-      }
-
-      if (!isInStorage) {
-        addToCartButton.innerHTML = `Added To Cart`;
-      } else {
         addToCartButton.innerHTML = `Add To Cart`;
       }
     };

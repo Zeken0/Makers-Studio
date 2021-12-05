@@ -1,17 +1,10 @@
 import { getFromLocalStorage } from "./libs/localHelpers.js";
 
-let data = JSON.parse(localStorage.getItem("cart"));
-
-let totalAmount = 0;
-for (let i = 0; i < data.length; i++) {
-  totalAmount += Number(data[i].price);
-  document.querySelector(".total-Price").innerHTML = `
-  $${totalAmount}.00
-  `;
-}
+let data = getFromLocalStorage("cart");
+console.log(data);
 
 data.forEach((artwork) => {
-  if (!localStorage.length === 1) {
+  if (data === []) {
     document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">The cart is empty !</div>
     <div class="cart-mid-center">
@@ -27,7 +20,7 @@ data.forEach((artwork) => {
     <img src="${artwork.image}" alt="an image of a painting">
     </a>
     <a href="productDetailsPage.html?id=${artwork.id}">
-      <h2>${artwork.name}</h2>
+    <h2>${artwork.name}</h2>
     </a>
     </div>
     <div class="cart-mid-center">
@@ -39,13 +32,18 @@ data.forEach((artwork) => {
   }
 });
 
-let deleteItemBtn = document.querySelectorAll(".fa-times");
-let cartItems = getFromLocalStorage("cart");
+let totalAmount = 0;
+for (let i = 0; i < data.length; i++) {
+  totalAmount += Number(data[i].price);
+  document.querySelector(".total-Price").innerHTML = `
+  $${totalAmount}.00
+  `;
+}
 
-console.log(deleteItemBtn.id);
-let isInStorage = cartItems.find((item) => {
-  return item.id === deleteItemBtn.dataset.id;
-});
-deleteItemBtn.onclick = () => {
-  Storage.removeItem(isInStorage);
-};
+// let deleteItemBtn = document.querySelectorAll(".fa-times");
+// let cartItems = getFromLocalStorage("cart");
+
+// let isInStorage = cartItems.find((item) => {
+//   return item.id === deleteItemBtn.dataset.id;
+// });
+// deleteItemBtn.onclick = () => {};
