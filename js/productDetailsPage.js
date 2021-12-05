@@ -30,14 +30,25 @@ async function getSingleArtwork(postId) {
       </div>
     `;
 
-    /* ------------------------------------------ addToLocalStorage ---------------------------------------------- */
+    /* ------------------------------------------ toggleItemInLocalStorage ---------------------------------------------- */
     let addToCartButton = document.querySelector(
       ".productsDetailsMain-right-btn"
     );
 
-    addToCartButton.onclick = () => {
-      addToCartButton.classList.toggle(".added");
+    let cartItems = getFromLocalStorage("cart");
 
+    let isInStorage = cartItems.find((item) => {
+      return item.id === addToCartButton.dataset.id;
+    });
+
+    if (isInStorage) {
+      addToCartButton.innerHTML = `Added To Cart`;
+      addToCartButton.classList.add(".added");
+    } else {
+      addToCartButton.classList.remove(".added");
+    }
+
+    addToCartButton.onclick = () => {
       let artwork = {
         id: addToCartButton.dataset.id,
         image: addToCartButton.dataset.image,
@@ -45,23 +56,16 @@ async function getSingleArtwork(postId) {
         price: addToCartButton.dataset.price,
       };
 
-      let cartItems = getFromLocalStorage("cart");
-
-      let isInStorage = cartItems.find((item) => {
-        return item.id === addToCartButton.dataset.id;
-      });
-
       if (isInStorage === undefined) {
         cartItems.push(artwork);
         saveToLocalStorage("cart", cartItems);
-        addToCartButton.innerHTML = `Added To Cart`;
       } else {
         let removedcartItemsArray = cartItems.filter((item) => {
           return item.id !== addToCartButton.dataset.id;
         });
         saveToLocalStorage("cart", removedcartItemsArray);
-        addToCartButton.innerHTML = `Add To Cart`;
       }
+      location.reload();
     };
     /* ------------------------------------------ hideLoader ---------------------------------------------- */
     const loaderContent = document.querySelector(".loader");
