@@ -684,4 +684,37 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
     width: 100% !important;
   }
 }
+
+.loginMain {
+  border: solid red 1px;
+}
+
+.loginMain .container {
+  border: solid blue 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginMain .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginMain .container .form {
+  row-gap: 1rem !important;
+}
 /*# sourceMappingURL=styles.css.map */
