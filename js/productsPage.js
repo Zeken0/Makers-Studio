@@ -1,5 +1,7 @@
 import writeHtmlToDom from "./libs/writeHtmlToDom.js";
 
+import alert from "./components/alert.js";
+
 let container = document.querySelector(".products-artworks");
 
 async function getAllArtworksData() {
@@ -36,14 +38,7 @@ async function getAllArtworksData() {
     });
     /* ----------------------------------------- /HideLoader ---------------------------------------------- */
   } catch (error) {
-    document.querySelector(".alert").innerHTML += thisIsAnAlert(
-      "An error has occured",
-      "danger"
-    );
-  } finally {
-    setTimeout(function () {
-      document.querySelector(".alert").innerHTML = "";
-    }, 3000);
+    alert("alert-danger", "An error has occured");
   }
 }
 getAllArtworksData();

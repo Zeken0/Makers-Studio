@@ -5,7 +5,7 @@ import {
 
 import alert from "./components/alert.js";
 
-import { saveToLocalStorage } from "./libs/localStorageHelper.js";
+import { saveToLocalStorage } from "./libs/localHelpers.js";
 
 let form = document.querySelector(".form");
 let email = document.querySelector("#email");

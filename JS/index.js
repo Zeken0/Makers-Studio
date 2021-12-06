@@ -1,3 +1,5 @@
+import alert from "./components/alert.js";
+
 async function getHeroBannerData() {
   try {
     const repsonse = await fetch("https://makers-studio.herokuapp.com/home/");
@@ -21,14 +23,7 @@ async function getHeroBannerData() {
     });
     /* ----------------------------------------- /HideLoader ---------------------------------------------- */
   } catch (error) {
-    document.querySelector(".alert").innerHTML += thisIsAnAlert(
-      "An error has occured",
-      "danger"
-    );
-  } finally {
-    setTimeout(function () {
-      document.querySelector(".alert").innerHTML = "";
-    }, 3000);
+    alert("alert-danger", "An error has occured");
   }
 }
 getHeroBannerData();
@@ -64,14 +59,7 @@ async function getFeaturedArtworksData() {
     });
     /* ----------------------------------------- /HideLoader ---------------------------------------------- */
   } catch (error) {
-    document.querySelector(".alert").innerHTML += thisIsAnAlert(
-      "An error has occured",
-      "danger"
-    );
-  } finally {
-    setTimeout(function () {
-      document.querySelector(".alert").innerHTML = "";
-    }, 3000);
+    alert("alert-danger", "An error has occured");
   }
 }
 getFeaturedArtworksData();

@@ -1,6 +1,11 @@
-function thisIsAnAlert(
-    message = 'This is an alert',
-    classType = 'danger',
-    ) {
-    return `<div class="${classType}">${message}<div>`;
+export default function alert(cssClass, Message) {
+  document.querySelector(
+    ".alert"
+  ).innerHTML = `<div class="warning  ${cssClass}">
+      ${Message}
+    </div>`;
+
+  setTimeout(() => {
+    document.querySelector(".alert").innerHTML = "";
+  }, 3000);
 }

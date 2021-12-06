@@ -12,6 +12,16 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+body .alert {
+  margin-bottom: unset;
+  padding: unset;
+}
+
+body .alert .warning {
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
 /* ----------------------------------------------------- Header -------------------------------------------- */
 nav {
   padding: 0 1rem 0 1rem;
@@ -685,11 +695,11 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   }
 }
 
-.loginMain {
+main .loginMain {
   border: solid red 1px;
 }
 
-.loginMain .container {
+main .loginMain .container {
   border: solid blue 1px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -702,7 +712,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
           align-items: center;
 }
 
-.loginMain .container .row {
+main .loginMain .container .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -714,7 +724,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
           align-items: center;
 }
 
-.loginMain .container .form {
+main .loginMain .container .form {
   row-gap: 1rem !important;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -9,6 +9,16 @@
 body {
   background-color: $secondary-color;
   font-family: $primary-font;
+
+  .alert {
+    margin-bottom: unset;
+    padding: unset;
+
+    .warning {
+      padding: 1rem;
+      margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+  }
 }
 
 /* ----------------------------------------------------- Header -------------------------------------------- */

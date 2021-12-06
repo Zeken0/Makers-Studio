@@ -31,5 +31,7 @@ carForm.onsubmit = async function (event) {
     name.value = "";
     description.value = "";
     image.value = "";
-  } catch (error) {}
+  } catch (error) {
+    alert("alert-danger", "An error has occured");
+  }
 };

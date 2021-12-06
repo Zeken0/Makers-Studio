@@ -3,6 +3,8 @@ import {
   getFromLocalStorage,
 } from "./libs/localHelpers.js";
 
+import alert from "./components/alert.js";
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -15,8 +17,8 @@ async function getSingleArtwork(postId) {
     const artwork = await repsonse.json();
     const artworkContainer = document.querySelector(".productsDetailsMain");
 
-    document.title += `
-                ${artwork.Title}
+    document.title = `
+                ${artwork.Title} - Maker´s Studio 
             `;
     artworkContainer.innerHTML = `
       <div class="productsDetailsMain-left">
@@ -75,15 +77,7 @@ async function getSingleArtwork(postId) {
     });
     /* ----------------------------------------- /hideLoader ---------------------------------------------- */
   } catch (error) {
-    document.querySelector(".alert").innerHTML += thisIsAnAlert(
-      "An error has occured",
-      "danger"
-    );
-    console.log(error);
-  } finally {
-    setTimeout(function () {
-      document.querySelector(".alert").innerHTML = "";
-    }, 3000);
+    alert("alert-danger", "An error has occured");
   }
 }
 

@@ -1,19 +1,21 @@
-.loginMain {
-  border: solid red 1px;
-  .container {
-    border: solid blue 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .row {
+main {
+  .loginMain {
+    border: solid red 1px;
+    .container {
+      border: solid blue 1px;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
 
-    .form {
-      row-gap: 1rem !important;
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form {
+        row-gap: 1rem !important;
+      }
     }
   }
 }
