@@ -8,8 +8,25 @@
 }
 
 body {
-  background-color: #fafafa;
-  font-family: "Open Sans", sans-serif;
+  background-color: #fafafa !important;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5 {
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 0.3px;
+}
+
+body h1 {
+  font-weight: 700;
+}
+
+body h2 {
+  font-weight: 600;
 }
 
 body .alert {
@@ -24,6 +41,8 @@ body .alert .warning {
 
 /* ----------------------------------------------------- Header -------------------------------------------- */
 nav {
+  font-size: 1.01rem !important;
+  font-weight: 500;
   padding: 0 1rem 0 1rem;
   z-index: 10;
   -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
@@ -107,11 +126,14 @@ nav i {
 .herobanner .heroBanner-nav .heroBanner-nav-group button {
   width: 40%;
   height: 4rem;
+  font-weight: 600;
   background-color: transparent;
   color: #525252;
-  border-width: 1.5px;
+  border-width: 2.5px;
   border-style: solid;
   border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
   width: 100%;
   font-size: 1.25rem;
 }
@@ -192,8 +214,9 @@ main .featured-products .featured-products-artwork .loadingGifTwo {
 }
 
 main .featured-products .featured-products-artwork span {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: #6c6c6c !important;
 }
 
 main .featured-products .featured-products-artwork .featured-products-artwork-single {
@@ -208,12 +231,23 @@ main .featured-products .featured-products-artwork .featured-products-artwork-si
 }
 
 main .featured-products .featured-products-artwork .featured-products-artwork-single img {
+  margin-bottom: 1rem;
   cursor: pointer;
   width: 100%;
 }
 
 main .featured-products .featured-products-artwork .featured-products-artwork-single img:hover {
   opacity: 95% !important;
+}
+
+main .featured-products .featured-products-artwork .featured-products-artwork-single h3 {
+  font-weight: 500;
+}
+
+main .featured-products .featured-products-artwork .featured-products-artwork-single span {
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: #6c6c6c !important;
 }
 
 /* ----------------------------------------------------- Footer --------------------------------------------- */
@@ -422,17 +456,23 @@ main .productsMain .products-artworks .products-artwork-single {
   width: 32.44%;
 }
 
-main .productsMain .products-artworks .products-artwork-single span {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
 main .productsMain .products-artworks .products-artwork-single img {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 main .productsMain .products-artworks .products-artwork-single img:hover {
   opacity: 95% !important;
+}
+
+main .productsMain .products-artworks .products-artwork-single span {
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: #6c6c6c !important;
+}
+
+main .productsMain .products-artworks .products-artwork-single h3 {
+  font-weight: 500;
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
@@ -495,22 +535,28 @@ main .productsDetailsMain .productsDetailsMain-right {
 }
 
 main .productsDetailsMain .productsDetailsMain-right span {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: #6c6c6c !important;
 }
 
 main .productsDetailsMain .productsDetailsMain-right p {
-  border: red;
+  letter-spacing: 0.3px;
+  line-height: 1.82rem;
+  max-width: 700px;
 }
 
 main .productsDetailsMain .productsDetailsMain-right button {
   width: 40%;
   height: 4rem;
+  font-weight: 600;
   background-color: transparent;
   color: #525252;
-  border-width: 1.5px;
+  border-width: 2.5px;
   border-style: solid;
   border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
 }
 
 main .productsDetailsMain .productsDetailsMain-right button:hover {
@@ -564,6 +610,12 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   margin: auto;
   width: 98%;
   margin-top: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cartMain h1 {
+  font-weight: 600;
 }
 
 .cartMain .cart-top {
@@ -615,6 +667,10 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   padding-right: 3rem;
 }
 
+.cartMain .cart-mid .cart-mid-left h2 {
+  font-weight: 500;
+}
+
 .cartMain .cart-mid .cart-mid-left a {
   text-decoration: none;
   color: unset;
@@ -656,6 +712,10 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
           align-items: center;
 }
 
+.cartMain .cart-mid .cart-mid-right span {
+  font-weight: 600;
+}
+
 .cartMain .cart-bottom {
   margin-top: 2rem;
   display: -webkit-box;
@@ -671,14 +731,23 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
           align-items: flex-end;
 }
 
+.cartMain .cart-bottom .total-Price {
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding-left: 0.5rem;
+}
+
 .cartMain .cart-bottom button {
   width: 40%;
   height: 4rem;
+  font-weight: 600;
   background-color: transparent;
   color: #525252;
-  border-width: 1.5px;
+  border-width: 2.5px;
   border-style: solid;
   border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
   width: 15%;
 }
 
@@ -717,11 +786,14 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   .cart-bottom button {
     width: 40%;
     height: 4rem;
+    font-weight: 600;
     background-color: transparent;
     color: #525252;
-    border-width: 1.5px;
+    border-width: 2.5px;
     border-style: solid;
     border-radius: 3px;
+    font-family: "jost", sans-serif !important;
+    letter-spacing: 1.5px !important;
     width: 22% !important;
   }
 }
@@ -762,11 +834,14 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   .cartMain .cart-bottom button {
     width: 40%;
     height: 4rem;
+    font-weight: 600;
     background-color: transparent;
     color: #525252;
-    border-width: 1.5px;
+    border-width: 2.5px;
     border-style: solid;
     border-radius: 3px;
+    font-family: "jost", sans-serif !important;
+    letter-spacing: 1.5px !important;
     width: 100% !important;
   }
 }
@@ -806,11 +881,14 @@ main .loginMain .container .form {
 main .loginMain .container .btn-primary {
   width: 40%;
   height: 4rem;
+  font-weight: 600;
   background-color: transparent;
   color: #525252;
-  border-width: 1.5px;
+  border-width: 2.5px;
   border-style: solid;
   border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
   border-color: unset !important;
 }
 

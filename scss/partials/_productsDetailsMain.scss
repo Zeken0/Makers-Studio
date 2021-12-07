@@ -4,9 +4,6 @@ main {
     display: flex;
     column-gap: 6rem;
 
-    .productsDetailsMain-left {
-    }
-
     .productsDetailsMain-right {
       display: flex;
       flex-direction: column;
@@ -17,7 +14,9 @@ main {
       }
 
       p {
-        border: red;
+        letter-spacing: 0.3px;
+        line-height: 1.82rem;
+        max-width: 700px;
       }
 
       button {
