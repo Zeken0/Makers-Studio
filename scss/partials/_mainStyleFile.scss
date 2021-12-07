@@ -203,15 +203,21 @@ footer {
   }
 
   .heroBanner-nav-group {
-    row-gap: 0.25rem !important;
+    row-gap: 0.5rem !important;
+    width: 80% !important;
+  }
+
+  .loadingGif {
+    width: 15% !important;
+    margin: 9rem auto 9rem auto !important;
   }
 
   main {
     margin-bottom: 5rem;
 
     .loadingGifTwo {
-      width: 20% !important;
-      margin: auto;
+      width: 10% !important;
+      margin: 9rem auto 9rem auto !important;
     }
 
     .featured-products-artwork-single {
@@ -234,24 +240,26 @@ footer {
 
   .herobanner {
     flex-direction: column-reverse;
-    row-gap: 1rem;
+    row-gap: unset;
     box-shadow: none;
 
     .heroBanner-nav {
       width: 100% !important;
 
       .heroBanner-nav-group {
+        margin: 1rem auto 1rem auto;
         width: 90% !important;
-        row-gap: 0.35rem;
-
-        button {
-          margin-bottom: 1rem;
-        }
+        row-gap: 0.4rem !important;
       }
     }
 
     .heroBanner-Image {
       width: 100% !important;
+
+      .loadingGif {
+        width: 15% !important;
+        margin: 9.56rem auto 9.56rem auto !important;
+      }
     }
   }
 
@@ -263,7 +271,7 @@ footer {
       flex-direction: column;
 
       .loadingGifTwo {
-        width: 35% !important;
+        width: 15% !important;
         margin: auto;
       }
 
