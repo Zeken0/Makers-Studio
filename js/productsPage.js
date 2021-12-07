@@ -6,6 +6,9 @@ let container = document.querySelector(".products-artworks");
 
 async function getAllArtworksData() {
   try {
+    document.querySelector(".products-artworks").innerHTML = `
+    <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
+    `;
     const repsonse = await fetch(
       "https://makers-studio.herokuapp.com/Products/"
     );
@@ -28,17 +31,10 @@ async function getAllArtworksData() {
         writeHtmlToDom(container, artwork);
       });
     };
-
-    /* ------------------------------------------ HideLoader ---------------------------------------------- */
-    const loaderContent = document.querySelector(".loader");
-
-    setTimeout(function () {
-      loaderContent.style.display = "none";
-      showMoreBtn.style.display = "block";
-    });
-    /* ----------------------------------------- /HideLoader ---------------------------------------------- */
   } catch (error) {
     alert("alert-danger", "An error has occured");
+  } finally {
+    document.querySelector(".loadingGif").style.display = "none";
   }
 }
 getAllArtworksData();

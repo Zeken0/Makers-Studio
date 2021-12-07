@@ -1,8 +1,8 @@
 main {
   .loginMain {
-    border: solid red 1px;
+    margin-top: 2rem;
+
     .container {
-      border: solid blue 1px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,6 +15,15 @@ main {
 
       .form {
         row-gap: 1rem !important;
+      }
+
+      .btn-primary {
+        @include button;
+        border-color: unset !important;
+      }
+
+      .btn-primary:hover {
+        @include buttonHover;
       }
     }
   }

@@ -2,6 +2,9 @@ import alert from "./components/alert.js";
 
 async function getHeroBannerData() {
   try {
+    document.querySelector(".heroBanner-Image").innerHTML = `
+    <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
+    `;
     const repsonse = await fetch("https://makers-studio.herokuapp.com/home/");
     const data = await repsonse.json();
     let heroData = data;
@@ -13,23 +16,19 @@ async function getHeroBannerData() {
     document.querySelector(".heroBanner-Image").innerHTML += `
       <img src="${heroData.Hero_banner_url}" alt="${heroData.Hero_banner_alt_text}">
       `;
-
-    /* ------------------------------------------ HideLoader ---------------------------------------------- */
-    const loaderContent = document.querySelector(".loader");
-
-    setTimeout(function () {
-      loaderContent.style.display = "none";
-      showMoreBtn.style.display = "block";
-    });
-    /* ----------------------------------------- /HideLoader ---------------------------------------------- */
   } catch (error) {
     alert("alert-danger", "An error has occured");
+  } finally {
+    document.querySelector(".loadingGif").style.display = "none";
   }
 }
 getHeroBannerData();
 
 async function getFeaturedArtworksData() {
   try {
+    document.querySelector(".featured-products-artwork").innerHTML = `
+      <img class="loadingGifTwo" src="/images/Loading-gif.gif" alt="a loading gif">
+    `;
     const repsonse = await fetch(
       "https://makers-studio.herokuapp.com/Products/"
     );
@@ -49,17 +48,10 @@ async function getFeaturedArtworksData() {
         `;
       }
     });
-
-    /* ------------------------------------------ HideLoader ---------------------------------------------- */
-    const loaderContent = document.querySelector(".loader");
-
-    setTimeout(function () {
-      loaderContent.style.display = "none";
-      showMoreBtn.style.display = "block";
-    });
-    /* ----------------------------------------- /HideLoader ---------------------------------------------- */
   } catch (error) {
     alert("alert-danger", "An error has occured");
+  } finally {
+    document.querySelector(".loadingGifTwo").style.display = "none";
   }
 }
 getFeaturedArtworksData();
