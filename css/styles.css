@@ -435,15 +435,15 @@ main .productsMain .products-nav .search {
 main .productsMain .products-nav .search #bar {
   width: 100%;
   height: 2.5rem;
-  background-color: whitesmoke;
+  background-color: white;
   border: none;
   outline: none;
   font-size: 0.92rem;
   padding: 0 12px 0 12px;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 3px 0 0 3px;
-  -webkit-box-shadow: 0 2px 2px -2.3px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 2px 2px -2.3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
 }
 
 main .productsMain .products-nav h1 {
@@ -903,7 +903,6 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
 }
 
 main .loginMain {
-  border: solid #525252 1px;
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -914,27 +913,68 @@ main .loginMain {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 6rem;
-          column-gap: 6rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 main .loginMain img {
   height: 30rem;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  -webkit-box-shadow: 1px 0px 1px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 main .loginMain .container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  max-width: unset !important;
   width: 100% !important;
+}
+
+main .loginMain .container .col-sm-6 {
+  width: 80%;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  row-gap: 1rem !important;
+}
+
+main .loginMain .container .col-sm-6 .form-control {
+  width: 100%;
+  height: 2.5rem;
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  padding: 0 12px 0 12px;
+  font-weight: 400;
+  border-radius: 3px 0 0 3px;
+  -webkit-box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
 }
 
 main .loginMain .container h1 {
   font-weight: 600;
-}
-
-main .loginMain .container .form {
-  row-gap: 1rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 main .loginMain .container .btn-primary {
+  margin-top: 2rem;
   width: 40%;
   height: 4rem;
   font-weight: 600;
@@ -946,7 +986,7 @@ main .loginMain .container .btn-primary {
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
   border-color: unset !important;
-  width: 100%;
+  width: 50%;
 }
 
 main .loginMain .container .btn-primary:hover {
@@ -977,9 +1017,17 @@ main .loginMain .container .btn-primary:hover {
 @media (max-width: 767px) {
   .loginMain {
     margin-top: 2rem !important;
+    row-gap: 1.5rem !important;
   }
   .loginMain img {
     height: 14rem !important;
+  }
+  .loginMain .col-sm-6 {
+    width: 100% !important;
+  }
+  .loginMain .btn-primary {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
