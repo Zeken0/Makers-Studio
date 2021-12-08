@@ -14,9 +14,11 @@ main {
       }
 
       p {
+        font-size: 0.9rem;
         letter-spacing: 0.3px;
         line-height: 1.82rem;
-        max-width: 700px;
+        line-break: auto;
+        max-width: 690px;
       }
 
       button {

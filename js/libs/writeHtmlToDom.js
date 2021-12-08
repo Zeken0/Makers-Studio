@@ -7,7 +7,7 @@ export default function writeHtmlToDom(
         <a href="/productDetailsPage.html?id=${htmlToInsertIntoTheDom.id}">
             <img src="${htmlToInsertIntoTheDom.Image_url}" alt="an image of a painting"/>
         </a>
-        <h3>${htmlToInsertIntoTheDom.Title}</h3>
+        <h2>${htmlToInsertIntoTheDom.Title}</h2>
         <span>$${htmlToInsertIntoTheDom.Price}.00</span>
     </div>
     `;

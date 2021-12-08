@@ -1,6 +1,6 @@
 .cartMain {
   margin: auto;
-  width: 98%;
+
   margin-top: 3rem;
   @include title;
 
@@ -9,11 +9,15 @@
   }
 
   .cart-top {
-    margin-top: 2.2rem;
+    margin-top: 3rem;
     padding-bottom: 0.9rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+
+    span {
+      font-weight: 500;
+    }
 
     .cart-top-left {
       width: 70%;
@@ -91,7 +95,7 @@
     .total-Price {
       font-weight: 700;
       font-size: 1.15rem;
-      padding-left: 0.5rem;
+      padding-left: 0.4rem;
     }
 
     button {
@@ -107,19 +111,19 @@
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) /*Tablet*/ {
-  .cart-mid {
-    .cart-top-left {
-      width: 70% !important;
-    }
-    .cart-top-mid {
-      align-items: flex-end !important;
-      width: 20% !important;
-    }
-    .cart-top-right {
-      width: 10% !important;
-      text-align: right;
-    }
+  .cart-top-left {
+    width: 70% !important;
+  }
+  .cart-top-mid {
+    align-items: flex-end !important;
+    width: 20% !important;
+  }
+  .cart-top-right {
+    width: 10% !important;
+    text-align: right;
+  }
 
+  .cart-mid {
     .cart-mid-left {
       column-gap: 3rem !important;
 
@@ -145,9 +149,8 @@
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) /*Mobile*/ {
-  .cartMain {
-    width: unset;
-
+  .cart-top {
+    margin-top: 2rem !important;
     .cart-top-left {
       width: 65% !important;
     }
@@ -159,6 +162,11 @@
       width: 10% !important;
       text-align: right;
     }
+  }
+
+  .cartMain {
+    margin-top: 1.5rem !important;
+    width: unset;
 
     .cart-mid-left {
       column-gap: 0.7rem !important;
