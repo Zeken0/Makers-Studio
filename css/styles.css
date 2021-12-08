@@ -143,6 +143,7 @@ nav i {
   border-radius: 3px;
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
+  outline: none !important;
   width: 100%;
   font-size: 1.25rem;
 }
@@ -434,7 +435,7 @@ main .productsMain .products-nav .search {
 
 main .productsMain .products-nav .search #bar {
   width: 100%;
-  height: 2.5rem;
+  height: 2.7rem;
   background-color: white;
   border: none;
   outline: none;
@@ -442,8 +443,12 @@ main .productsMain .products-nav .search #bar {
   padding: 0 12px 0 12px;
   font-weight: 400;
   border-radius: 3px 0 0 3px;
-  -webkit-box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
-          box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.1);
+}
+
+main .productsMain .products-nav .search #bar:focus {
+  border: #525252 solid 1px;
 }
 
 main .productsMain .products-nav h1 {
@@ -475,7 +480,7 @@ main .productsMain .products-artworks .loadingGif {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: 12%;
+  width: 10%;
   margin: 10rem auto 5rem auto;
 }
 
@@ -606,6 +611,7 @@ main .productsDetailsMain .productsDetailsMain-right button {
   border-radius: 3px;
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
+  outline: none !important;
 }
 
 main .productsDetailsMain .productsDetailsMain-right button:hover {
@@ -800,6 +806,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   border-radius: 3px;
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
+  outline: none !important;
   width: 15%;
 }
 
@@ -846,6 +853,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
     border-radius: 3px;
     font-family: "jost", sans-serif !important;
     letter-spacing: 1.5px !important;
+    outline: none !important;
     width: 22% !important;
   }
 }
@@ -898,6 +906,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
     border-radius: 3px;
     font-family: "jost", sans-serif !important;
     letter-spacing: 1.5px !important;
+    outline: none !important;
     width: 100% !important;
   }
 }
@@ -915,8 +924,8 @@ main .loginMain {
           align-items: center;
   -webkit-column-gap: 3rem;
           column-gap: 3rem;
-  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1.7px 2px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.7px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 main .loginMain img {
@@ -924,8 +933,8 @@ main .loginMain img {
   background-position: center;
   background-size: cover;
   background-color: transparent;
-  -webkit-box-shadow: 1px 0px 1px -2px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 0px 1px -2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 0px 2px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 main .loginMain .container {
@@ -942,8 +951,14 @@ main .loginMain .container {
   width: 100% !important;
 }
 
+main .loginMain .container .row {
+  display: unset;
+  -ms-flex-wrap: unset;
+      flex-wrap: unset;
+}
+
 main .loginMain .container .col-sm-6 {
-  width: 80%;
+  width: 100%;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -954,9 +969,15 @@ main .loginMain .container .col-sm-6 {
   row-gap: 1rem !important;
 }
 
+main .loginMain .container .col-sm-6 .form-label {
+  font-weight: 500 !important;
+}
+
 main .loginMain .container .col-sm-6 .form-control {
+  margin-bottom: 1.7rem !important;
+  width: 27.5rem;
   width: 100%;
-  height: 2.5rem;
+  height: 2.7rem;
   background-color: white;
   border: none;
   outline: none;
@@ -964,8 +985,12 @@ main .loginMain .container .col-sm-6 .form-control {
   padding: 0 12px 0 12px;
   font-weight: 400;
   border-radius: 3px 0 0 3px;
-  -webkit-box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
-          box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.1);
+}
+
+main .loginMain .container .col-sm-6 .form-control:focus {
+  border: #525252 solid 1px;
 }
 
 main .loginMain .container h1 {
@@ -985,8 +1010,9 @@ main .loginMain .container .btn-primary {
   border-radius: 3px;
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
+  outline: none !important;
   border-color: unset !important;
-  width: 50%;
+  width: 40%;
 }
 
 main .loginMain .container .btn-primary:hover {
@@ -1003,31 +1029,37 @@ main .loginMain .container .btn-primary:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
   }
   .loginMain img {
-    height: 30rem !important;
+    height: 31.5rem !important;
   }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {
   .loginMain {
+    -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
     margin-top: 2rem !important;
-    row-gap: 1.5rem !important;
+    row-gap: 2rem !important;
   }
   .loginMain img {
-    height: 14rem !important;
+    height: 14.17rem !important;
   }
-  .loginMain .col-sm-6 {
-    width: 100% !important;
+  .loginMain h1 {
+    text-align: center;
+  }
+  .loginMain .form-control {
+    width: 20rem !important;
   }
   .loginMain .btn-primary {
     width: 100% !important;
-    margin-bottom: 1rem !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
