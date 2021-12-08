@@ -903,31 +903,31 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
 }
 
 main .loginMain {
-  margin-top: 2rem;
+  border: solid #525252 1px;
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 6rem;
+          column-gap: 6rem;
+}
+
+main .loginMain img {
+  height: 30rem;
 }
 
 main .loginMain .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100% !important;
 }
 
-main .loginMain .container .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main .loginMain .container h1 {
+  font-weight: 600;
 }
 
 main .loginMain .container .form {
@@ -946,6 +946,7 @@ main .loginMain .container .btn-primary {
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
   border-color: unset !important;
+  width: 100%;
 }
 
 main .loginMain .container .btn-primary:hover {
@@ -953,5 +954,32 @@ main .loginMain .container .btn-primary:hover {
   transition: 0.15s;
   background-color: #525252;
   color: white;
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) {
+  .loginMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .loginMain img {
+    height: 30rem !important;
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) {
+  .loginMain {
+    margin-top: 2rem !important;
+  }
+  .loginMain img {
+    height: 14rem !important;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

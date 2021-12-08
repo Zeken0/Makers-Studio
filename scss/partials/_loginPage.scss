@@ -1,16 +1,21 @@
 main {
   .loginMain {
-    margin-top: 2rem;
+    border: solid $primary-color 1px;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 6rem;
+
+    img {
+      height: 30rem;
+    }
 
     .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100% !important;
 
-      .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      h1 {
+        font-weight: 600;
       }
 
       .form {
@@ -20,11 +25,35 @@ main {
       .btn-primary {
         @include button;
         border-color: unset !important;
+        width: 100%;
       }
 
       .btn-primary:hover {
         @include buttonHover;
       }
+    }
+  }
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) /*Tablet*/ {
+  .loginMain {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+
+    img {
+      height: 30rem !important;
+    }
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) /*Mobile*/ {
+  .loginMain {
+    margin-top: 2rem !important;
+    img {
+      height: 14rem !important;
     }
   }
 }
