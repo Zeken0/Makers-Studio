@@ -10,6 +10,7 @@
   font-weight: 600;
   background-color: transparent;
   color: $primary-color;
+  border-color: $primary-color;
   border-width: 2.5px;
   border-style: solid;
   border-radius: 3px;
@@ -44,4 +45,5 @@
 
 @mixin searchBarHover {
   border: $primary-color solid 1px;
+  border-radius: 3px 0 0 3px;
 }

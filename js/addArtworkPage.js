@@ -5,23 +5,27 @@ let artworkForm = document.querySelector(".form");
 
 artworkForm.onsubmit = async function (event) {
   event.preventDefault();
-  const name = document.querySelector("#name");
+  const title = document.querySelector("#name");
   const description = document.querySelector("#description");
   const image = document.querySelector("#image");
 
   try {
     let newArtwork = {
-      name: name.value,
+      title: title.value,
       description: description.value,
       image_url: image.value,
     };
 
-    let response = await axios.post("http://localhost:1337/cars", newArtwork, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-      },
-    });
+    let response = await axios.post(
+      "http://localhost:1337/Products",
+      newArtwork,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        },
+      }
+    );
 
     // if we have data back show the user something
     console.log(response);
