@@ -17,20 +17,27 @@
     }
   }
 
-  .table-responsive {
-    .table {
-      overflow-y: auto !important;
-      overflow-x: auto !important;
+  a {
+    text-decoration: none !important;
+    color: unset !important;
+  }
 
-      .table-dark {
-        background-color: $primary-color !important;
-        --bs-table-bg: unset;
-      }
+  .fa-trash-alt,
+  .fa-edit {
+    font-size: 1.5rem !important;
+  }
 
-      .loadingGif {
-        width: 10rem;
-      }
-    }
+  .table {
+    overflow-y: auto !important;
+    overflow-x: auto !important;
+  }
+
+  .table-dark {
+    background-color: $primary-color !important;
+    --bs-table-bg: unset;
+  }
+  .loadingGif {
+    width: 10rem;
   }
 }
 

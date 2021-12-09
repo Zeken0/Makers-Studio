@@ -69,13 +69,6 @@ async function getSingleArtwork(postId) {
       }
       location.reload();
     };
-    /* ------------------------------------------ hideLoader ---------------------------------------------- */
-    const loaderContent = document.querySelector(".loader");
-
-    setTimeout(function () {
-      loaderContent.style.display = "none";
-    });
-    /* ----------------------------------------- /hideLoader ---------------------------------------------- */
   } catch (error) {
     alert("alert-danger", "An error has occured");
   }

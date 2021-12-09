@@ -19,11 +19,19 @@ async function getAllArtworksData() {
 
     artworks.forEach((artwork) => {
       container.innerHTML += `
+      <a href="/editArtworkPage.html?id=${artwork.id}">
+      </a>
       <tr>
         <th scope="row">${artwork.id}</th>
         <td>${artwork.Title}</td>
         <td>${artwork.Description}</td>
         <td>${artwork.Image_url}</td>
+        <td>
+        <a href="/editArtworkPage.html?id=${artwork.id}">
+        <i class="fas fa-edit"></i>
+        </a>
+        </td>
+        <td><i class="fas fa-trash-alt"></i></td>
       </tr>
         `;
     });

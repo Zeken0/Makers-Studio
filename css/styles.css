@@ -1102,17 +1102,27 @@ main .loginMain .container .btn-primary:hover {
   color: white;
 }
 
-.adminMain .table-responsive .table {
+.adminMain a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+.adminMain .fa-trash-alt,
+.adminMain .fa-edit {
+  font-size: 1.5rem !important;
+}
+
+.adminMain .table {
   overflow-y: auto !important;
   overflow-x: auto !important;
 }
 
-.adminMain .table-responsive .table .table-dark {
+.adminMain .table-dark {
   background-color: #525252 !important;
   --bs-table-bg: unset;
 }
 
-.adminMain .table-responsive .table .loadingGif {
+.adminMain .loadingGif {
   width: 10rem;
 }
 
