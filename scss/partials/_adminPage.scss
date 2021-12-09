@@ -1,0 +1,53 @@
+.adminMain {
+  margin-top: 3rem;
+
+  .admin-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    button {
+      @include button;
+      width: 17%;
+    }
+
+    button:hover {
+      @include buttonHover;
+    }
+  }
+
+  .table-responsive {
+    .table {
+      overflow-y: auto !important;
+      overflow-x: auto !important;
+
+      .table-dark {
+        background-color: $primary-color !important;
+        --bs-table-bg: unset;
+      }
+
+      .loadingGif {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) /*Tablet*/ {
+  .adminMain {
+    button {
+      width: 30% !important;
+    }
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) /*Mobile*/ {
+  .adminMain {
+    button {
+      width: 35% !important;
+    }
+  }
+}

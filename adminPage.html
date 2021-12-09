@@ -57,7 +57,25 @@
   <div class="alert"></div>
   <body>
     <main>
-      <section class="adminMain"></section>
+      <section class="adminMain">
+        <div class="admin-nav">
+          <h1>Admin</h1>
+          <button class="admin-btn">Add New Artworks</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Image_url</th>
+                </tr>
+                <tbody class="table-data"></tbody>
+              </thead>
+            </table>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -85,6 +103,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script type="module" src="./js/components/createMenu.js"></script>
-    <script type="module" src="./js/cars.js"></script>
+    <script type="module" src="./js/admin.js"></script>
   </body>
 </html>

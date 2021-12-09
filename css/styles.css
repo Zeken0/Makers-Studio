@@ -1062,4 +1062,71 @@ main .loginMain .container .btn-primary:hover {
     width: 100% !important;
   }
 }
+
+.adminMain {
+  margin-top: 3rem;
+}
+
+.adminMain .admin-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.adminMain .admin-nav button {
+  width: 40%;
+  height: 4rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: #525252;
+  border-width: 2.5px;
+  border-style: solid;
+  border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
+  outline: none !important;
+  width: 17%;
+}
+
+.adminMain .admin-nav button:hover {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  background-color: #525252;
+  color: white;
+}
+
+.adminMain .table-responsive .table {
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+}
+
+.adminMain .table-responsive .table .table-dark {
+  background-color: #525252 !important;
+  --bs-table-bg: unset;
+}
+
+.adminMain .table-responsive .table .loadingGif {
+  width: 10rem;
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 991px) {
+  .adminMain button {
+    width: 30% !important;
+  }
+}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 767px) {
+  .adminMain button {
+    width: 35% !important;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
