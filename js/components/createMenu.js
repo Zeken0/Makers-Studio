@@ -1,4 +1,4 @@
-import { getUser } from "../libs/localStorageHelper.js";
+import { getUser } from "../libs/localHelper.js";
 
 (function () {
   if (getUser("user")) {
