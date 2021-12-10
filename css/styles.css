@@ -1019,7 +1019,7 @@ main .loginMain .container .btn-primary {
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
   outline: none !important;
-  border-color: unset !important;
+  border-color: #525252 !important;
   width: 40%;
 }
 

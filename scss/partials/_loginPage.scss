@@ -55,7 +55,7 @@ main {
       .btn-primary {
         margin-top: 2rem;
         @include button;
-        border-color: unset !important;
+        border-color: $primary-color !important;
         width: 40%;
       }
 
