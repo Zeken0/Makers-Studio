@@ -1,6 +1,10 @@
 import { getUser } from "./libs/localHelpers.js";
 import alert from "./components/alert.js";
 
+if (getUser("user") === null) {
+  window.location = "loginPage.html";
+}
+
 const title = document.querySelector("#inputTitle");
 const price = document.querySelector("#inputPrice");
 const image_url = document.querySelector("#inputImageUrl");

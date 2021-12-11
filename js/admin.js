@@ -1,4 +1,9 @@
 import alert from "./components/alert.js";
+import { getUser } from "./libs/localHelpers.js";
+
+if (getUser("user") === null) {
+  window.location = "loginPage.html";
+}
 
 document.querySelector(".admin-btn").onclick = () => {
   window.location = "addArtworkPage.html";

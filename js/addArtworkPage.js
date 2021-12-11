@@ -1,6 +1,10 @@
 import { getUser } from "./libs/localHelpers.js";
 import alert from "./components/alert.js";
 
+if (getUser("user") === null) {
+  window.location = "loginPage.html";
+}
+
 let addForm = document.querySelector(".add-form");
 
 addForm.onsubmit = async function (event) {
@@ -21,7 +25,7 @@ addForm.onsubmit = async function (event) {
     };
 
     let response = await axios.post(
-      "https://makers-studio.herokuapp.com/Products",
+      "https://makers-studio.herokuapp.com/Products/",
       newPiece,
       {
         headers: {

@@ -23,7 +23,7 @@ form.onsubmit = async function (event) {
       // Its important to name things exactly the way strapi asks you to
       // https://strapi.io/documentation/developer-docs/latest/guides/auth-request.html#login-as-a-reader
       const { data } = await axios.post(
-        "http://localhost:1337/auth/local",
+        "https://makers-studio.herokuapp.com/auth/local",
 
         {
           identifier: email.value,
