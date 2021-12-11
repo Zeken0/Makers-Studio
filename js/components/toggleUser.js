@@ -1,14 +1,14 @@
 import { getUser } from "../libs/localHelpers.js";
 
 (function () {
-  if (getUser("user").confirmed === true) {
+  if (getUser("user") !== null) {
     document.querySelector("#nav-user").innerHTML = `
-		Sign Out
-	`;
+		  Sign Out
+	  `;
 
     document.querySelector("#nav-user").onclick = () => {
       window.location = "index.html";
-      storage.removeItem(user);
+      localStorage.removeItem("user");
     };
   } else {
     document.querySelector("#nav-user").innerHTML = `
