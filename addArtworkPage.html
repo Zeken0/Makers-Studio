@@ -46,9 +46,7 @@
         <div class="navbar-nav">
           <a class="nav-link" href="/index.html">Home</a>
           <a class="nav-link" href="/productsPage.html">Artworks</a>
-          <a class="nav-link" aria-current="page" href="/loginPage.html"
-            >Login
-          </a>
+          <a class="nav-link" id="nav-user" aria-current="page">Login </a>
           <a class="nav-link" href="/cartPage.html">Cart </a>
         </div>
       </div>
@@ -58,22 +56,25 @@
   <body>
     <main>
       <section class="addArtworkMain">
-        <img src="/images/new.png" alt="" />
-        <form class="">
+        <img
+          src="/images/new.png"
+          alt="image of a woman painting in the browser"
+        />
+        <form class="add-form">
           <h1>Add New Piece</h1>
           <div class="label-top">
             <div>
-              <label for="inputEmail4" class="form-label">Title</label>
+              <label for="inputTitle" class="form-label">Title</label>
               <input type="text" class="form-control" id="inputTitle" />
             </div>
             <div>
-              <label for="inputPassword4" class="form-label">Price</label>
+              <label for="inputPrice" class="form-label">Price</label>
               <input type="number" class="form-control" id="inputPrice" />
             </div>
           </div>
           <div class="label-mid">
             <div>
-              <label for="inputPassword4" class="form-label">Image_url</label>
+              <label for="inputImageUrl" class="form-label">Image_url</label>
               <input type="text" class="form-control" id="inputImageUrl" />
             </div>
             <div class="form-check form-switch">
@@ -90,7 +91,7 @@
           </div>
 
           <div>
-            <label for="inputEmail4" class="form-label">Description</label>
+            <label for="inputDescription" class="form-label">Description</label>
             <input type="text" class="form-control" id="inputDescription" />
           </div>
 
@@ -124,7 +125,7 @@
     <!-- Import Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script type="module" src="./js/components/createMenu.js"></script>
+    <script type="module" src="./js/components/toggleUser.js"></script>
     <script type="module" src="./js/addArtworkPage.js"></script>
   </body>
 </html>

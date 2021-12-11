@@ -1,28 +1,32 @@
-// Lets get the details out of the user object and show some stuff
+import { getUser } from "./libs/localHelpers.js";
 import alert from "./components/alert.js";
 
-let artworkForm = document.querySelector(".form");
+let addForm = document.querySelector(".add-form");
 
-artworkForm.onsubmit = async function (event) {
+addForm.onsubmit = async function (event) {
   event.preventDefault();
-  const title = document.querySelector("#name");
-  const description = document.querySelector("#description");
-  const image = document.querySelector("#image");
+  const title = document.querySelector("#inputTitle");
+  const price = document.querySelector("#inputPrice");
+  const image_url = document.querySelector("#inputImageUrl");
+  const featured = document.querySelector("#flexSwitchCheckDefault");
+  const description = document.querySelector("#inputDescription");
 
   try {
-    let newArtwork = {
+    let newPiece = {
       title: title.value,
+      price: price.value,
+      image_url: image_url.value,
+      featured: featured.value,
       description: description.value,
-      image_url: image.value,
     };
 
     let response = await axios.post(
-      "http://localhost:1337/Products",
-      newArtwork,
+      "https://makers-studio.herokuapp.com/Products",
+      newPiece,
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          Authorization: `Bearer ${getUser("jwt")}`,
         },
       }
     );
@@ -30,11 +34,7 @@ artworkForm.onsubmit = async function (event) {
     // if we have data back show the user something
     console.log(response);
 
-    alert("alert-success", "Car has been created successfully");
-
-    name.value = "";
-    description.value = "";
-    image.value = "";
+    alert("alert-success", "The art piece has been added successfully");
   } catch (error) {
     alert("alert-danger", "An error has occured");
   }

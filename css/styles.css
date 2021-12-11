@@ -49,6 +49,10 @@ nav {
           box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
+nav #nav-user {
+  cursor: pointer;
+}
+
 nav .navbar-brand img {
   width: 14rem;
 }
