@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/31d00bb5b7.js"
       crossorigin="anonymous"
     ></script>
-    <title>Admin - Maker´s Studio</title>
+    <title>Edit Piece - Maker´s Studio</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -55,7 +55,51 @@
   <div class="alert"></div>
   <body>
     <main>
-      <section class="editArtworkMain"></section>
+      <section class="editArtworkMain">
+        <img
+          src="/images/editImage.png"
+          alt="image of a woman painting in the browser"
+        />
+        <form class="add-form">
+          <h1>Edit Piece</h1>
+          <div class="label-top">
+            <div>
+              <label for="inputTitle" class="form-label">Title</label>
+              <input type="text" class="form-control" id="inputTitle" />
+            </div>
+            <div>
+              <label for="inputPrice" class="form-label">Price</label>
+              <input type="number" class="form-control" id="inputPrice" />
+            </div>
+          </div>
+          <div class="label-mid">
+            <div>
+              <label for="inputImageUrl" class="form-label">Image_url</label>
+              <input type="text" class="form-control" id="inputImageUrl" />
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+              />
+              <label class="form-check-label" for="flexSwitchCheckDefault"
+                >Featured</label
+              >
+            </div>
+          </div>
+
+          <div>
+            <label for="inputDescription" class="form-label">Description</label>
+            <input type="text" class="form-control" id="inputDescription" />
+          </div>
+
+          <div>
+            <button type="submit" class="btn btn-primary">Add Piece</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer>

@@ -1075,7 +1075,8 @@ main .loginMain .container .btn-primary:hover {
   }
 }
 
-.addArtworkMain {
+.addArtworkMain,
+.editArtworkMain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1094,17 +1095,20 @@ main .loginMain .container .btn-primary:hover {
           column-gap: 1rem;
 }
 
-.addArtworkMain img {
+.addArtworkMain img,
+.editArtworkMain img {
   height: 25rem;
   -webkit-box-shadow: 0 1.7px 2px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1.7px 2px -1px rgba(0, 0, 0, 0.2);
 }
 
-.addArtworkMain h1 {
+.addArtworkMain h1,
+.editArtworkMain h1 {
   margin-bottom: 1rem;
 }
 
-.addArtworkMain form {
+.addArtworkMain form,
+.editArtworkMain form {
   display: -ms-grid;
   display: grid;
   row-gap: 1.1rem;
@@ -1114,7 +1118,11 @@ main .loginMain .container .btn-primary:hover {
 .addArtworkMain form #inputTitle,
 .addArtworkMain form #inputPrice,
 .addArtworkMain form #inputImageUrl,
-.addArtworkMain form #inputDescription {
+.addArtworkMain form #inputDescription,
+.editArtworkMain form #inputTitle,
+.editArtworkMain form #inputPrice,
+.editArtworkMain form #inputImageUrl,
+.editArtworkMain form #inputDescription {
   width: 100%;
   height: 2.7rem;
   background-color: white;
@@ -1131,12 +1139,17 @@ main .loginMain .container .btn-primary:hover {
 .addArtworkMain form #inputTitle:focus,
 .addArtworkMain form #inputPrice:focus,
 .addArtworkMain form #inputImageUrl:focus,
-.addArtworkMain form #inputDescription:focus {
+.addArtworkMain form #inputDescription:focus,
+.editArtworkMain form #inputTitle:focus,
+.editArtworkMain form #inputPrice:focus,
+.editArtworkMain form #inputImageUrl:focus,
+.editArtworkMain form #inputDescription:focus {
   border: #525252 solid 1px;
   border-radius: 3px 0 0 3px;
 }
 
-.addArtworkMain form .label-top {
+.addArtworkMain form .label-top,
+.editArtworkMain form .label-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1144,15 +1157,18 @@ main .loginMain .container .btn-primary:hover {
           column-gap: 1rem;
 }
 
-.addArtworkMain form .label-top #inputTitle {
+.addArtworkMain form .label-top #inputTitle,
+.editArtworkMain form .label-top #inputTitle {
   width: 25rem !important;
 }
 
-.addArtworkMain form .label-top #inputPrice {
+.addArtworkMain form .label-top #inputPrice,
+.editArtworkMain form .label-top #inputPrice {
   width: 10rem !important;
 }
 
-.addArtworkMain form .label-mid {
+.addArtworkMain form .label-mid,
+.editArtworkMain form .label-mid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1163,22 +1179,26 @@ main .loginMain .container .btn-primary:hover {
           column-gap: 1rem;
 }
 
-.addArtworkMain form .label-mid #inputImageUrl {
+.addArtworkMain form .label-mid #inputImageUrl,
+.editArtworkMain form .label-mid #inputImageUrl {
   width: 25rem;
 }
 
-.addArtworkMain form .label-mid .form-check-input:checked {
+.addArtworkMain form .label-mid .form-check-input:checked,
+.editArtworkMain form .label-mid .form-check-input:checked {
   background-color: #525252 !important;
   border-color: #525252 !important;
 }
 
-.addArtworkMain form #inputDescription {
+.addArtworkMain form #inputDescription,
+.editArtworkMain form #inputDescription {
   width: 25rem;
   height: 10rem;
   padding-bottom: 7rem;
 }
 
-.addArtworkMain form .btn-primary {
+.addArtworkMain form .btn-primary,
+.editArtworkMain form .btn-primary {
   width: 40%;
   height: 4rem;
   font-weight: 600;
@@ -1195,7 +1215,8 @@ main .loginMain .container .btn-primary:hover {
   width: 30%;
 }
 
-.addArtworkMain form .btn-primary:hover {
+.addArtworkMain form .btn-primary:hover,
+.editArtworkMain form .btn-primary:hover {
   -webkit-transition: 0.15s;
   transition: 0.15s;
   background-color: #525252;
@@ -1204,53 +1225,65 @@ main .loginMain .container .btn-primary:hover {
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) {
-  .addArtworkMain {
+  .addArtworkMain,
+  .editArtworkMain {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 3rem;
   }
-  .addArtworkMain img {
+  .addArtworkMain img,
+  .editArtworkMain img {
     height: 31.3rem;
   }
-  .addArtworkMain form {
+  .addArtworkMain form,
+  .editArtworkMain form {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .addArtworkMain button {
+  .addArtworkMain button,
+  .editArtworkMain button {
     width: 25% !important;
   }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {
-  .addArtworkMain {
+  .addArtworkMain,
+  .editArtworkMain {
     margin-top: 1.7rem;
   }
-  .addArtworkMain img {
+  .addArtworkMain img,
+  .editArtworkMain img {
     height: 14.6rem;
     -webkit-box-shadow: unset;
             box-shadow: unset;
   }
-  .addArtworkMain h1 {
+  .addArtworkMain h1,
+  .editArtworkMain h1 {
     text-align: center;
     margin-bottom: 2.5rem;
   }
-  .addArtworkMain form .label-top #inputTitle {
+  .addArtworkMain form .label-top #inputTitle,
+  .editArtworkMain form .label-top #inputTitle {
     width: 13rem !important;
   }
-  .addArtworkMain form .label-top #inputPrice {
+  .addArtworkMain form .label-top #inputPrice,
+  .editArtworkMain form .label-top #inputPrice {
     width: 7rem !important;
   }
-  .addArtworkMain form .label-mid #inputImageUrl {
+  .addArtworkMain form .label-mid #inputImageUrl,
+  .editArtworkMain form .label-mid #inputImageUrl {
     width: 13rem;
   }
-  .addArtworkMain form #inputDescription {
+  .addArtworkMain form #inputDescription,
+  .editArtworkMain form #inputDescription {
     width: 21rem;
   }
-  .addArtworkMain form button {
+  .addArtworkMain form button,
+  .editArtworkMain form button {
     width: 100% !important;
   }
 }

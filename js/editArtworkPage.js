@@ -1,9 +1,11 @@
-import {
-  saveToLocalStorage,
-  getFromLocalStorage,
-} from "./libs/localHelpers.js";
-
+import { getUser } from "./libs/localHelpers.js";
 import alert from "./components/alert.js";
+
+const title = document.querySelector("#inputTitle");
+const price = document.querySelector("#inputPrice");
+const image_url = document.querySelector("#inputImageUrl");
+const featured = document.querySelector("#flexSwitchCheckDefault");
+const description = document.querySelector("#inputDescription");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -15,22 +17,12 @@ async function getSingleArtwork(postId) {
       "https://makers-studio.herokuapp.com/Products/" + postId
     );
     const artwork = await repsonse.json();
-    const Container = document.querySelector(".editArtworkMain");
 
-    document.title = `
-                  ${artwork.Title} - Maker´s Studio 
-              `;
-    Container.innerHTML = `
-        <div class="productsDetailsMain-left">
-        <img src="${artwork.Image_url}"  alt="image of a painting" >
-        </div>
-        <div class="productsDetailsMain-right">
-        <h1>${artwork.Title}</h1>
-        <span>$${artwork.Price}.00</span>
-        <p>${artwork.Description}</p>
-        <button class="productsDetailsMain-right-btn">Add To Cart</button>
-        </div>
-      `;
+    title.value = `${artwork.Title}`;
+    price.value = `${artwork.Price}.00`;
+    image_url.value = `${artwork.Image_url}`;
+    featured.value = `${artwork.Featured}`;
+    description.value = `${artwork.Description}`;
   } catch (error) {
     alert("alert-danger", "An error has occured");
   }

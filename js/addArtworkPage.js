@@ -30,8 +30,6 @@ addForm.onsubmit = async function (event) {
         },
       }
     );
-
-    // if we have data back show the user something
     console.log(response);
 
     alert("alert-success", "The art piece has been added successfully");
