@@ -5,30 +5,53 @@ if (getUser("user") === null) {
   window.location = "loginPage.html";
 }
 
-const title = document.querySelector("#inputTitle");
-const price = document.querySelector("#inputPrice");
-const image_url = document.querySelector("#inputImageUrl");
-const featured = document.querySelector("#flexSwitchCheckDefault");
-const description = document.querySelector("#inputDescription");
+let title = document.querySelector("#inputTitle");
+let price = document.querySelector("#inputPrice");
+let image_url = document.querySelector("#inputImageUrl");
+let featured = document.querySelector("#flexSwitchCheckDefault");
+let description = document.querySelector("#inputDescription");
+const form = document.querySelector(".add-form");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-async function getSingleArtwork(postId) {
-  try {
-    const repsonse = await fetch(
-      "https://makers-studio.herokuapp.com/Products/" + postId
-    );
-    const artwork = await repsonse.json();
+async function getSpecificArtwork() {
+  const repsonse = await axios.get(
+    "https://makers-studio.herokuapp.com/Products/" + id
+  );
+  const artwork = await repsonse.data;
 
-    title.value = `${artwork.Title}`;
-    price.value = `${artwork.Price}.00`;
-    image_url.value = `${artwork.Image_url}`;
-    featured.value = `${artwork.Featured}`;
-    description.value = `${artwork.Description}`;
-  } catch (error) {
-    alert("alert-danger", "An error has occured");
-  }
+  title.value = artwork.Title;
+  price.value = artwork.Price;
+  image_url.value = artwork.Image_url;
+  featured.value = artwork.Featured;
+  description.value = artwork.Description;
 }
-getSingleArtwork(id);
+getSpecificArtwork();
+
+form.onsubmit = async function (event) {
+  event.preventDefault();
+  let updatedPiece = {
+    title: title.value,
+    price: price.value,
+    image_url: image_url.value,
+    featured: featured.value,
+    description: description.value,
+  };
+
+  const response = await axios.put(
+    `https://makers-studio.herokuapp.com/Products/` + id,
+    updatedPiece,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${getUser("jwt")}`,
+      },
+    }
+  );
+
+  alert("alert-success", "Art piece has been updated successfully");
+
+  console.log(response);
+};

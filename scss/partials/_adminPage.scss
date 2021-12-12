@@ -25,11 +25,11 @@
   .fa-trash-alt,
   .fa-edit {
     font-size: 1.5rem !important;
+    cursor: pointer;
   }
 
   .table {
-    overflow-y: auto !important;
-    overflow-x: auto !important;
+    width: 83rem !important;
   }
 
   .table-dark {

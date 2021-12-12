@@ -1336,11 +1336,11 @@ main .loginMain .container .btn-primary:hover {
 .adminMain .fa-trash-alt,
 .adminMain .fa-edit {
   font-size: 1.5rem !important;
+  cursor: pointer;
 }
 
 .adminMain .table {
-  overflow-y: auto !important;
-  overflow-x: auto !important;
+  width: 83rem !important;
 }
 
 .adminMain .table-dark {
