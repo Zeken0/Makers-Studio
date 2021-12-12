@@ -10,7 +10,7 @@
         "../scss/partials/_productsDetailsMain.scss",
         "../scss/partials/_cartPage.scss",
         "../scss/partials/_loginPage.scss",
-        "../scss/partials/_addArtworkPage.scss",
+        "../scss/partials/_add&EditPage.scss",
         "../scss/partials/_adminPage.scss"
     ],
     "names": [],

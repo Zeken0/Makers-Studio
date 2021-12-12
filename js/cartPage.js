@@ -3,6 +3,8 @@ import {
   saveToLocalStorage,
 } from "./libs/localHelpers.js";
 
+import alert from "./components/alert.js";
+
 let data = getFromLocalStorage("cart");
 
 let totalAmount = 0;
@@ -15,12 +17,14 @@ for (let i = 0; i < data.length; i++) {
 
 data.forEach((artwork) => {
   if (artwork === []) {
-    document.querySelector(".cart-mid").innerHTML += `
-    <div class="cart-mid-left">The cart is empty !</div>
-    <div class="cart-mid-center">
-    <input type="text" aria-label="Quantity" value="-" />
-    </div>
-    <div class="cart-mid-right">$0.00</div>
+    document.querySelector(".cart-mid").innerHTML = `
+      <div class="cart-mid-left">
+        The cart is empty !
+      </div>
+      <div class="cart-mid-center">
+        <input type="text" aria-label="Quantity" value="-" />
+      </div>
+      <div class="cart-mid-right">$0.00</div>
     `;
   } else {
     document.querySelector(".cart-mid").innerHTML += `
@@ -68,3 +72,9 @@ deleteItemBtn.forEach((deleteBtn) => {
     }
   };
 });
+
+document.querySelector(".cart-btn").onclick = () => {
+  localStorage.removeItem("cart");
+  alert("alert-success", "The art piece has been purchased successfully");
+  window.location = "index.html";
+};
