@@ -29,10 +29,10 @@ async function getFeaturedArtworksData() {
     document.querySelector(".featured-products-artwork").innerHTML = `
       <img class="loadingGifTwo" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
-    const repsonse = await fetch(
+    const repsonse = await axios.get(
       "https://makers-studio.herokuapp.com/Products/"
     );
-    const data = await repsonse.json();
+    const data = await repsonse.data;
     let featuredData = data;
 
     featuredData.forEach((artwork) => {

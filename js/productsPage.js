@@ -1,5 +1,4 @@
 import writeHtmlToDom from "./libs/writeHtmlToDom.js";
-
 import alert from "./components/alert.js";
 
 let container = document.querySelector(".products-artworks");
@@ -9,10 +8,10 @@ async function getAllArtworksData() {
     document.querySelector(".products-artworks").innerHTML = `
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
-    const repsonse = await fetch(
+    const repsonse = await axios.get(
       "https://makers-studio.herokuapp.com/Products/"
     );
-    const data = await repsonse.json();
+    const data = await repsonse.data;
     let artworks = data;
 
     artworks.forEach((artwork) => {
