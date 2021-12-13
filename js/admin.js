@@ -16,7 +16,9 @@ async function getArtworkAndDeleteArtwork() {
     document.querySelector(".table-data").innerHTML = `
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
-    const repsonse = axios.get("https://makers-studio.herokuapp.com/Products/");
+    const repsonse = await axios.get(
+      "https://makers-studio.herokuapp.com/Products/"
+    );
     const data = await repsonse.data;
     let artworks = data;
 
@@ -28,7 +30,7 @@ async function getArtworkAndDeleteArtwork() {
       </a>
       <tr>
         <th scope="row">${artwork.id}</th>
-        <td>$${artwork.Price}.00</td>
+        <td>${artwork.Price}</td>
         <td>${artwork.Title}</td>
         <td>
           ${artwork.Description}

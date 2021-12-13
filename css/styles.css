@@ -1235,7 +1235,7 @@ main .loginMain .container .btn-primary:hover {
   }
   .addArtworkMain img,
   .editArtworkMain img {
-    height: 31.3rem;
+    height: 24.3rem;
   }
   .addArtworkMain form,
   .editArtworkMain form {
@@ -1246,6 +1246,9 @@ main .loginMain .container .btn-primary:hover {
   .addArtworkMain button,
   .editArtworkMain button {
     width: 25% !important;
+  }
+  .editArtworkMain img {
+    height: 29.31rem;
   }
 }
 
@@ -1285,6 +1288,9 @@ main .loginMain .container .btn-primary:hover {
   .addArtworkMain form button,
   .editArtworkMain form button {
     width: 100% !important;
+  }
+  .editArtworkMain img {
+    height: 17.9rem;
   }
 }
 
@@ -1349,7 +1355,7 @@ main .loginMain .container .btn-primary:hover {
 }
 
 .adminMain .loadingGif {
-  width: 10rem;
+  width: 4rem;
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */

@@ -89,7 +89,7 @@
     row-gap: 3rem;
 
     img {
-      height: 31.3rem;
+      height: 24.3rem;
     }
 
     form {
@@ -98,6 +98,12 @@
 
     button {
       width: 25% !important;
+    }
+  }
+
+  .editArtworkMain {
+    img {
+      height: 29.31rem;
     }
   }
 }
@@ -142,6 +148,12 @@
       button {
         width: 100% !important;
       }
+    }
+  }
+
+  .editArtworkMain {
+    img {
+      height: 17.9rem;
     }
   }
 }
