@@ -16,10 +16,8 @@ async function getArtworkAndDeleteArtwork() {
     document.querySelector(".table-data").innerHTML = `
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
-    const repsonse = await fetch(
-      "https://makers-studio.herokuapp.com/Products/"
-    );
-    const data = await repsonse.json();
+    const repsonse = axios.get("https://makers-studio.herokuapp.com/Products/");
+    const data = await repsonse.data;
     let artworks = data;
 
     container.innerHTML = ``;

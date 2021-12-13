@@ -1194,7 +1194,7 @@ main .loginMain .container .btn-primary:hover {
 .editArtworkMain form #inputDescription {
   width: 25rem;
   height: 10rem;
-  padding-bottom: 7rem;
+  padding-top: 0.5rem;
 }
 
 .addArtworkMain form .btn-primary,
