@@ -1269,12 +1269,12 @@ main .loginMain .container .btn-primary:hover {
     text-align: center;
     margin-bottom: 2.5rem;
   }
-  .addArtworkMain form .label-top #inputTitle,
-  .editArtworkMain form .label-top #inputTitle {
+  .addArtworkMain form .label-top #title,
+  .editArtworkMain form .label-top #title {
     width: 13rem !important;
   }
-  .addArtworkMain form .label-top #inputPrice,
-  .editArtworkMain form .label-top #inputPrice {
+  .addArtworkMain form .label-top #price,
+  .editArtworkMain form .label-top #price {
     width: 7rem !important;
   }
   .addArtworkMain form .label-mid #image_url,

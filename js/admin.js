@@ -25,14 +25,17 @@ async function getArtworkAndDeleteArtwork() {
     container.innerHTML = ``;
 
     artworks.forEach((artwork) => {
+      if (artwork.Featured === null) {
+        artwork.Featured = false;
+      }
       container.innerHTML += `
-      <a href="/editArtworkPage.html?id=${artwork.id}">
-      </a>
       <tr>
         <th scope="row">${artwork.id}</th>
         <td>${artwork.Price}</td>
         <td>${artwork.Title}</td>
-        <td>${artwork.Featured}</td>
+        <td> 
+        ${artwork.Featured}
+        </td>
         <td>
           ${artwork.Description}
         </td>
@@ -77,7 +80,7 @@ async function getArtworkAndDeleteArtwork() {
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                   No
                 </button>
-                <button type="button" id="confirmButton" class="btn btn-primary">Yes</button>
+                <button type="button" id="confirmButton" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
               </div>
             </div>
           </div>
@@ -95,7 +98,6 @@ async function getArtworkAndDeleteArtwork() {
           );
           console.log(response);
           getArtworkAndDeleteArtwork();
-          window.location.reload();
         };
       };
     });

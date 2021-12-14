@@ -21,7 +21,10 @@ async function getSpecificArtwork() {
     "https://makers-studio.herokuapp.com/Products/" + id
   );
   const artwork = await repsonse.data;
-  console.log(artwork);
+  if (artwork.Featured === null) {
+    artwork.Featured = false;
+  }
+  console.log(artwork.Featured);
   title.value = artwork.Title;
   price.value = artwork.Price;
   image_url.value = artwork.Image_url;
