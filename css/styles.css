@@ -321,6 +321,7 @@ footer .footer-nav {
   -webkit-column-gap: 0.6rem;
           column-gap: 0.6rem;
   text-transform: uppercase;
+  padding-left: unset;
 }
 
 footer .footer-nav li {

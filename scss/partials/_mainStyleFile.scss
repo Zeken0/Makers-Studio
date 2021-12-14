@@ -233,6 +233,8 @@ footer {
     display: flex;
     column-gap: 0.6rem;
     text-transform: uppercase;
+    padding-left: unset;
+
     li {
       cursor: pointer;
       letter-spacing: 0.3px;
