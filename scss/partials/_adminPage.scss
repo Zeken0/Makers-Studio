@@ -28,6 +28,33 @@
     cursor: pointer;
   }
 
+  .modal-content {
+    background-color: $secondary-color;
+  }
+
+  #confirmButton {
+    @include buttonHover;
+    width: 15%;
+    height: 3rem;
+    border-color: $primary-color;
+  }
+
+  #confirmButton:hover {
+    @include button;
+    width: 15%;
+    height: 3rem;
+  }
+
+  .btn-secondary {
+    @include button;
+    width: 15%;
+    height: 3rem;
+  }
+
+  .btn-secondary:hover {
+    @include buttonHover;
+  }
+
   .table {
     width: 83rem !important;
   }

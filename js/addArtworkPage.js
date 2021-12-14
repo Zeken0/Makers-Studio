@@ -17,11 +17,11 @@ addForm.onsubmit = async function (event) {
 
   try {
     let newPiece = {
-      Title: title.value,
-      Price: price.value,
-      Image_url: image_url.value,
-      Featured: featured.value,
-      Description: description.value,
+      title: title.value,
+      price: price.value,
+      image_url: image_url.value,
+      featured: featured.value,
+      description: description.value,
     };
 
     let response = await axios.post(

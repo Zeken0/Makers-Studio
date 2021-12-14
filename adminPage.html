@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Description" content="This is the admin page of the Maker´s Studio site" />
+    <meta
+      name="Description"
+      content="This is the admin page of the Maker´s Studio site"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +27,7 @@
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
-      />
+    />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -47,9 +50,7 @@
           <div class="navbar-nav">
             <a class="nav-link" href="/index.html">Home</a>
             <a class="nav-link" href="/productsPage.html">Artworks</a>
-            <a class="nav-link" id="nav-user" aria-current="page"
-              >Login
-            </a>
+            <a class="nav-link" id="nav-user" aria-current="page">Login </a>
             <a class="nav-link" href="/cartPage.html">Cart </a>
           </div>
         </div>
@@ -57,27 +58,27 @@
     </nav>
     <div class="alert"></div>
     <main>
-      
-      <section class="adminMain" >
+      <section class="adminMain">
         <div class="admin-nav">
           <h1>Admin</h1>
           <button class="admin-btn">Add New Artworks</button>
         </div>
         <div class="table-responsive">
-            <table class="table table-hover">
-              <thead class="table-dark">
-                <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Image_url</th>
-                  <th scope="col">Edit</th>
-                  <th scope="col">Delete</th>
-                </tr>
-                <tbody class="table-data"></tbody>
-              </thead>
-            </table>
+          <table class="table table-sm table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Price</th>
+                <th scope="col">Title</th>
+                <th scope="col">Featured</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image_url</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-data"></tbody>
+          </table>
         </div>
       </section>
     </main>

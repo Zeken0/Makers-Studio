@@ -51,5 +51,6 @@ form.onsubmit = async function (event) {
     }
   );
   alert("alert-success", "Art piece has been updated successfully");
+
   console.log(response.data);
 };

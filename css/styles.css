@@ -1345,6 +1345,61 @@ main .loginMain .container .btn-primary:hover {
   cursor: pointer;
 }
 
+.adminMain .modal-content {
+  background-color: #fafafa;
+}
+
+.adminMain #confirmButton {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  background-color: #525252;
+  color: white;
+  width: 15%;
+  height: 3rem;
+  border-color: #525252;
+}
+
+.adminMain #confirmButton:hover {
+  width: 40%;
+  height: 4rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: #525252;
+  border-color: #525252;
+  border-width: 2.5px;
+  border-style: solid;
+  border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
+  outline: none !important;
+  width: 15%;
+  height: 3rem;
+}
+
+.adminMain .btn-secondary {
+  width: 40%;
+  height: 4rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: #525252;
+  border-color: #525252;
+  border-width: 2.5px;
+  border-style: solid;
+  border-radius: 3px;
+  font-family: "jost", sans-serif !important;
+  letter-spacing: 1.5px !important;
+  outline: none !important;
+  width: 15%;
+  height: 3rem;
+}
+
+.adminMain .btn-secondary:hover {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  background-color: #525252;
+  color: white;
+}
+
 .adminMain .table {
   width: 83rem !important;
 }
