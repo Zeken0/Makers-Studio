@@ -21,17 +21,17 @@
     row-gap: 1.1rem;
     width: 100%;
 
-    #inputTitle,
-    #inputPrice,
-    #inputImageUrl,
-    #inputDescription {
+    #title,
+    #price,
+    #image_url,
+    #description {
       @include searchBar;
     }
 
-    #inputTitle:focus,
-    #inputPrice:focus,
-    #inputImageUrl:focus,
-    #inputDescription:focus {
+    #title:focus,
+    #price:focus,
+    #image_url:focus,
+    #description:focus {
       @include searchBarHover;
     }
 
@@ -39,11 +39,11 @@
       display: flex;
       column-gap: 1rem;
 
-      #inputTitle {
+      #title {
         width: 25rem !important;
       }
 
-      #inputPrice {
+      #price {
         width: 10rem !important;
       }
     }
@@ -53,7 +53,7 @@
       align-items: center;
       column-gap: 1rem;
 
-      #inputImageUrl {
+      #image_url {
         width: 25rem;
       }
 
@@ -63,7 +63,7 @@
       }
     }
 
-    #inputDescription {
+    #description {
       width: 25rem;
       height: 10rem;
       padding-top: 0.5rem;
@@ -136,12 +136,12 @@
       }
 
       .label-mid {
-        #inputImageUrl {
+        #image_url {
           width: 13rem;
         }
       }
 
-      #inputDescription {
+      #description {
         width: 21rem;
       }
 

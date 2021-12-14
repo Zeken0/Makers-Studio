@@ -1115,14 +1115,14 @@ main .loginMain .container .btn-primary:hover {
   width: 100%;
 }
 
-.addArtworkMain form #inputTitle,
-.addArtworkMain form #inputPrice,
-.addArtworkMain form #inputImageUrl,
-.addArtworkMain form #inputDescription,
-.editArtworkMain form #inputTitle,
-.editArtworkMain form #inputPrice,
-.editArtworkMain form #inputImageUrl,
-.editArtworkMain form #inputDescription {
+.addArtworkMain form #title,
+.addArtworkMain form #price,
+.addArtworkMain form #image_url,
+.addArtworkMain form #description,
+.editArtworkMain form #title,
+.editArtworkMain form #price,
+.editArtworkMain form #image_url,
+.editArtworkMain form #description {
   width: 100%;
   height: 2.7rem;
   background-color: white;
@@ -1136,14 +1136,14 @@ main .loginMain .container .btn-primary:hover {
           box-shadow: 0.1px 0.5px 2.5px 1.2px rgba(0, 0, 0, 0.1);
 }
 
-.addArtworkMain form #inputTitle:focus,
-.addArtworkMain form #inputPrice:focus,
-.addArtworkMain form #inputImageUrl:focus,
-.addArtworkMain form #inputDescription:focus,
-.editArtworkMain form #inputTitle:focus,
-.editArtworkMain form #inputPrice:focus,
-.editArtworkMain form #inputImageUrl:focus,
-.editArtworkMain form #inputDescription:focus {
+.addArtworkMain form #title:focus,
+.addArtworkMain form #price:focus,
+.addArtworkMain form #image_url:focus,
+.addArtworkMain form #description:focus,
+.editArtworkMain form #title:focus,
+.editArtworkMain form #price:focus,
+.editArtworkMain form #image_url:focus,
+.editArtworkMain form #description:focus {
   border: #525252 solid 1px;
   border-radius: 3px 0 0 3px;
 }
@@ -1157,13 +1157,13 @@ main .loginMain .container .btn-primary:hover {
           column-gap: 1rem;
 }
 
-.addArtworkMain form .label-top #inputTitle,
-.editArtworkMain form .label-top #inputTitle {
+.addArtworkMain form .label-top #title,
+.editArtworkMain form .label-top #title {
   width: 25rem !important;
 }
 
-.addArtworkMain form .label-top #inputPrice,
-.editArtworkMain form .label-top #inputPrice {
+.addArtworkMain form .label-top #price,
+.editArtworkMain form .label-top #price {
   width: 10rem !important;
 }
 
@@ -1179,8 +1179,8 @@ main .loginMain .container .btn-primary:hover {
           column-gap: 1rem;
 }
 
-.addArtworkMain form .label-mid #inputImageUrl,
-.editArtworkMain form .label-mid #inputImageUrl {
+.addArtworkMain form .label-mid #image_url,
+.editArtworkMain form .label-mid #image_url {
   width: 25rem;
 }
 
@@ -1190,8 +1190,8 @@ main .loginMain .container .btn-primary:hover {
   border-color: #525252 !important;
 }
 
-.addArtworkMain form #inputDescription,
-.editArtworkMain form #inputDescription {
+.addArtworkMain form #description,
+.editArtworkMain form #description {
   width: 25rem;
   height: 10rem;
   padding-top: 0.5rem;
@@ -1277,12 +1277,12 @@ main .loginMain .container .btn-primary:hover {
   .editArtworkMain form .label-top #inputPrice {
     width: 7rem !important;
   }
-  .addArtworkMain form .label-mid #inputImageUrl,
-  .editArtworkMain form .label-mid #inputImageUrl {
+  .addArtworkMain form .label-mid #image_url,
+  .editArtworkMain form .label-mid #image_url {
     width: 13rem;
   }
-  .addArtworkMain form #inputDescription,
-  .editArtworkMain form #inputDescription {
+  .addArtworkMain form #description,
+  .editArtworkMain form #description {
     width: 21rem;
   }
   .addArtworkMain form button,

@@ -9,19 +9,19 @@ let addForm = document.querySelector(".add-form");
 
 addForm.onsubmit = async function (event) {
   event.preventDefault();
-  const title = document.querySelector("#inputTitle");
-  const price = document.querySelector("#inputPrice");
-  const image_url = document.querySelector("#inputImageUrl");
-  const featured = document.querySelector("#flexSwitchCheckDefault");
-  const description = document.querySelector("#inputDescription");
+  const title = document.querySelector("#title");
+  const price = document.querySelector("#price");
+  const image_url = document.querySelector("#image_url");
+  const featured = document.querySelector("#featured");
+  const description = document.querySelector("#description");
 
   try {
     let newPiece = {
-      title: title.value,
-      price: price.value,
-      image_url: image_url.value,
-      featured: featured.value,
-      description: description.value,
+      Title: title.value,
+      Price: price.value,
+      Image_url: image_url.value,
+      Featured: featured.value,
+      Description: description.value,
     };
 
     let response = await axios.post(

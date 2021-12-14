@@ -5,12 +5,12 @@ if (getUser("user") === null) {
   window.location = "loginPage.html";
 }
 
-let title = document.querySelector("#inputTitle");
-let price = document.querySelector("#inputPrice");
-let image_url = document.querySelector("#inputImageUrl");
-let featured = document.querySelector("#flexSwitchCheckDefault");
-let description = document.querySelector("#inputDescription");
 const form = document.querySelector(".add-form");
+let title = document.querySelector("#title");
+let price = document.querySelector("#price");
+let image_url = document.querySelector("#image_url");
+let featured = document.querySelector("#featured");
+let description = document.querySelector("#description");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -21,7 +21,7 @@ async function getSpecificArtwork() {
     "https://makers-studio.herokuapp.com/Products/" + id
   );
   const artwork = await repsonse.data;
-
+  console.log(artwork);
   title.value = artwork.Title;
   price.value = artwork.Price;
   image_url.value = artwork.Image_url;
@@ -33,11 +33,11 @@ getSpecificArtwork();
 form.onsubmit = async function (event) {
   event.preventDefault();
   let updatedPiece = {
-    title: title.value,
-    price: price.value,
-    image_url: image_url.value,
-    featured: featured.value,
-    description: description.value,
+    Title: title.value,
+    Price: price.value,
+    Image_url: image_url.value,
+    Featured: featured.value,
+    Description: description.value,
   };
 
   const response = await axios.put(
@@ -50,8 +50,6 @@ form.onsubmit = async function (event) {
       },
     }
   );
-
   alert("alert-success", "Art piece has been updated successfully");
-
-  console.log(response);
+  console.log(response.data);
 };
