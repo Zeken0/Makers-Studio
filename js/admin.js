@@ -31,7 +31,7 @@ async function getArtworkAndDeleteArtwork() {
       container.innerHTML += `
         <tr>
           <th scope="row">${artwork.id}</th>
-          <td>${artwork.Price}</td>
+          <td>$${artwork.Price}.00</td>
           <td>${artwork.Title}</td>
           <td> 
           ${artwork.Featured}
@@ -108,27 +108,3 @@ async function getArtworkAndDeleteArtwork() {
   }
 }
 getArtworkAndDeleteArtwork();
-
-{
-  /* <tr>
-        <th scope="row">${artwork.id}</th>
-        <td>${artwork.Price}</td>
-        <td>${artwork.Title}</td>
-        <td> 
-        ${artwork.Featured}
-        </td>
-        <td>
-          ${artwork.Description}
-        </td>
-        <td>
-          ${artwork.Image_url}
-        </td>
-        <td>
-        <a href="/editArtworkPage.html?id=${artwork.id}">
-        <i class="fas fa-edit"></i>
-        </a>
-        </td>
-        <td><i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id=${artwork.id}></i></td>
-      </tr>
-        `; */
-}

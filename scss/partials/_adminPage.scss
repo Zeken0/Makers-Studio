@@ -55,10 +55,6 @@
     @include buttonHover;
   }
 
-  .table {
-    width: 83rem !important;
-  }
-
   .table-dark {
     background-color: $primary-color !important;
     --bs-table-bg: unset;

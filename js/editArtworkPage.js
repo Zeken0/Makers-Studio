@@ -23,7 +23,12 @@ async function getSpecificArtwork() {
   const artwork = await repsonse.data;
   if (artwork.Featured === null) {
     artwork.Featured = false;
+  } else {
+    document
+      .querySelector(".form-check-input")
+      .classList.toggle("#flexSwitchCheckChecked");
   }
+
   console.log(artwork.Featured);
   title.value = artwork.Title;
   price.value = artwork.Price;

@@ -1063,7 +1063,7 @@ main .loginMain .container .btn-primary:hover {
     row-gap: 2rem !important;
   }
   .loginMain img {
-    height: 14.17rem !important;
+    height: 15.65rem !important;
   }
   .loginMain h1 {
     text-align: center;
@@ -1399,10 +1399,6 @@ main .loginMain .container .btn-primary:hover {
   transition: 0.15s;
   background-color: #525252;
   color: white;
-}
-
-.adminMain .table {
-  width: 83rem !important;
 }
 
 .adminMain .table-dark {
