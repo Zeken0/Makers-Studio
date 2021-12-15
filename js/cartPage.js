@@ -6,7 +6,6 @@ import {
 import alert from "./components/alert.js";
 
 let data = getFromLocalStorage("cart");
-
 let totalAmount = 0;
 for (let i = 0; i < data.length; i++) {
   totalAmount += Number(data[i].price);
@@ -14,20 +13,10 @@ for (let i = 0; i < data.length; i++) {
   $${totalAmount}.00
   `;
 }
-
+document.querySelector(".cart-mid").innerHTML = `
+`;
 data.forEach((artwork) => {
-  if (artwork === []) {
-    document.querySelector(".cart-mid").innerHTML = `
-      <div class="cart-mid-left">
-        The cart is empty !
-      </div>
-      <div class="cart-mid-center">
-        <input type="text" aria-label="Quantity" value="-" />
-      </div>
-      <div class="cart-mid-right">$0.00</div>
-    `;
-  } else {
-    document.querySelector(".cart-mid").innerHTML += `
+  document.querySelector(".cart-mid").innerHTML += `
     <div class="cart-mid-left">
     <i class="fas fa-times" data-id="${artwork.id}" data-image="${artwork.Image_url}" data-name="${artwork.Title}" data-price="${artwork.Price}"></i>
     <a href="productDetailsPage.html?id=${artwork.id}">
@@ -43,14 +32,13 @@ data.forEach((artwork) => {
     <div class="cart-mid-right">$${artwork.price}.00</div>
     </div>
     `;
-  }
 });
 
 let deleteItemBtn = document.querySelectorAll(".fa-times");
 
 deleteItemBtn.forEach((deleteBtn) => {
   deleteBtn.onclick = () => {
-    window.top.location.reload();
+    window.location.reload();
     let artwork = {
       id: deleteBtn.dataset.id,
     };
@@ -76,5 +64,7 @@ deleteItemBtn.forEach((deleteBtn) => {
 document.querySelector(".cart-btn").onclick = () => {
   localStorage.removeItem("cart");
   alert("alert-success", "The art piece has been purchased successfully");
-  window.location = "index.html";
+  setTimeout(() => {
+    window.location = "index.html";
+  }, 1000);
 };

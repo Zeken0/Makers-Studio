@@ -11,15 +11,15 @@ const id = params.get("id");
 
 async function getSingleArtwork(postId) {
   try {
-    const repsonse = await fetch(
+    const repsonse = await axios.get(
       "https://makers-studio.herokuapp.com/Products/" + postId
     );
-    const artwork = await repsonse.json();
+    const artwork = await repsonse.data;
     const artworkContainer = document.querySelector(".productsDetailsMain");
 
     document.title = `
-                ${artwork.Title} - Maker´s Studio 
-            `;
+      ${artwork.Title} - Maker´s Studio 
+    `;
     artworkContainer.innerHTML = `
       <div class="productsDetailsMain-left">
       <img src="${artwork.Image_url}"  alt="image of a painting" >
@@ -45,9 +45,6 @@ async function getSingleArtwork(postId) {
 
     if (isInStorage) {
       addToCartButton.innerHTML = `Added To Cart`;
-      addToCartButton.classList.add(".added");
-    } else {
-      addToCartButton.classList.remove(".added");
     }
 
     addToCartButton.onclick = () => {

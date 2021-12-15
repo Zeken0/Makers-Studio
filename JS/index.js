@@ -39,11 +39,11 @@ async function getFeaturedArtworksData() {
       if (artwork.Featured === true) {
         document.querySelector(".featured-products-artwork").innerHTML += `
           <div class="featured-products-artwork-single">
-          <a href="/productDetailsPage.html?id=${artwork.id}">
-            <img src="${artwork.Image_url}" alt="an image of a painting"/>
-          </a>
-            <h3>${artwork.Title}</h3>
-            <span>$${artwork.Price}.00</span>
+            <a href="/productDetailsPage.html?id=${artwork.id}">
+              <img src="${artwork.Image_url}" alt="an image of a painting"/>
+            </a>
+              <h3>${artwork.Title}</h3>
+              <span>$${artwork.Price}.00</span>
           </div>
         `;
       }
