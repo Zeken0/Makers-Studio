@@ -66,5 +66,5 @@ document.querySelector(".cart-btn").onclick = () => {
   alert("alert-success", "The art piece has been purchased successfully");
   setTimeout(() => {
     window.location = "index.html";
-  }, 1000);
+  }, 5000);
 };
