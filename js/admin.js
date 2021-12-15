@@ -25,31 +25,45 @@ async function getArtworkAndDeleteArtwork() {
     container.innerHTML = ``;
 
     artworks.forEach((artwork) => {
-      container.innerHTML += `
-      <div class="admin-body-piece">
-        <div class="featured-piece">
-          <span>Featured</span>
-        </div>
-        <a href="/productDetailsPage.html?id=${artwork.id}">
-            <img src="${artwork.Image_url}" alt="an image of a painting"/>
-        </a>
-        <h2>${artwork.Title}</h2>
-        <div class="admin-tools">
-          <span>$${artwork.Price}.00</span>
-          <div class="admin-tools-two">
-            <a href="/editArtworkPage.html?id=${artwork.id}">
-              <i class="fas fa-edit"></i>
+      if (artwork.Featured === true) {
+        container.innerHTML += `
+          <div class="admin-body-piece">
+            <div class="featured-piece">
+              <span>Featured</span>
+            </div>
+            <a href="/productDetailsPage.html?id=${artwork.id}">
+                <img src="${artwork.Image_url}" alt="an image of a painting"/>
             </a>
-            <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id=${artwork.id}></i>
+            <h2>${artwork.Title}</h2>
+            <div class="admin-tools">
+              <span>$${artwork.Price}.00</span>
+              <div class="admin-tools-two">
+                <a href="/editArtworkPage.html?id=${artwork.id}">
+                  <i class="fas fa-edit"></i>
+                </a>
+                <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id=${artwork.id}></i>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        container.innerHTML += `
+        <div class="admin-body-piece">
+          <a href="/productDetailsPage.html?id=${artwork.id}">
+              <img src="${artwork.Image_url}" alt="an image of a painting"/>
+          </a>
+          <h2>${artwork.Title}</h2>
+          <div class="admin-tools">
+            <span>$${artwork.Price}.00</span>
+            <div class="admin-tools-two">
+              <a href="/editArtworkPage.html?id=${artwork.id}">
+                <i class="fas fa-edit"></i>
+              </a>
+              <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id=${artwork.id}></i>
+            </div>
           </div>
         </div>
-      </div>
       `;
-
-      if (artwork.Featured === null) {
-        document.querySelector(".featured-piece").style.display = "none";
-        artwork.Featured = false;
-      } else {
       }
     });
 
