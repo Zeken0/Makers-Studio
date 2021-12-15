@@ -55,6 +55,7 @@ main {
         img:hover {
           opacity: 95% !important;
         }
+
         span {
           @include price;
         }

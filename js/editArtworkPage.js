@@ -23,10 +23,6 @@ async function getSpecificArtwork() {
   const artwork = await repsonse.data;
   if (artwork.Featured === null) {
     artwork.Featured = false;
-  } else {
-    document
-      .querySelector(".form-check-input")
-      .classList.toggle("#flexSwitchCheckChecked");
   }
 
   console.log(artwork.Featured);
@@ -58,7 +54,10 @@ form.onsubmit = async function (event) {
       },
     }
   );
-  alert("alert-success", "Art piece has been updated successfully");
+  alert(
+    "alert-success",
+    "The art piece has been updated successfully! remember to refresh the admin page to see the changes!"
+  );
 
   console.log(response.data);
 };

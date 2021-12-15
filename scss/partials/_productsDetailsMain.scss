@@ -51,6 +51,7 @@ main {
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) /*Mobile*/ {
   .productsDetailsMain {
+    margin-top: 1.5rem !important;
     flex-direction: column;
     border: none !important;
     row-gap: 1rem;

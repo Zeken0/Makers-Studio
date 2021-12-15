@@ -7,5 +7,5 @@ export default function alert(cssClass, Message) {
 
   setTimeout(() => {
     document.querySelector(".alert").innerHTML = "";
-  }, 3000);
+  }, 5000);
 }

@@ -34,7 +34,7 @@ addForm.onsubmit = async function (event) {
         },
       }
     );
-    alert("alert-success", "The art piece has been added successfully");
+    alert("alert-success", "The art piece has been added successfully!");
     title.value = "";
     price.value = "";
     image_url.value = "";

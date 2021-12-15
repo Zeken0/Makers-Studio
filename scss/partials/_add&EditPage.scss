@@ -23,6 +23,7 @@
 
     #title,
     #price,
+    #featured,
     #image_url,
     #description {
       @include searchBar;
@@ -57,9 +58,8 @@
         width: 25rem;
       }
 
-      .form-check-input:checked {
-        background-color: $primary-color !important;
-        border-color: $primary-color !important;
+      #featured {
+        width: 10rem !important;
       }
     }
 
@@ -112,7 +112,7 @@
 @media (max-width: 767px) /*Mobile*/ {
   .addArtworkMain,
   .editArtworkMain {
-    margin-top: 1.7rem;
+    margin-top: 1.5rem;
 
     img {
       height: 14.6rem;
@@ -127,17 +127,21 @@
     form {
       .label-top {
         #title {
-          width: 13rem !important;
+          width: 15rem !important;
         }
 
         #price {
-          width: 7rem !important;
+          width: 5rem !important;
         }
       }
 
       .label-mid {
         #image_url {
-          width: 13rem;
+          width: 15rem;
+        }
+
+        #featured {
+          width: 5rem !important;
         }
       }
 

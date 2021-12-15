@@ -9,11 +9,11 @@ document.querySelector(".admin-btn").onclick = () => {
   window.location = "addArtworkPage.html";
 };
 
-let container = document.querySelector(".table-data");
+let container = document.querySelector(".admin-body");
 
 async function getArtworkAndDeleteArtwork() {
   try {
-    document.querySelector(".table-data").innerHTML = `
+    document.querySelector(".admin-body").innerHTML = `
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
     const repsonse = await axios.get(
@@ -25,31 +25,32 @@ async function getArtworkAndDeleteArtwork() {
     container.innerHTML = ``;
 
     artworks.forEach((artwork) => {
-      if (artwork.Featured === null) {
-        artwork.Featured = false;
-      }
       container.innerHTML += `
-        <tr>
-          <th scope="row">${artwork.id}</th>
-          <td>$${artwork.Price}.00</td>
-          <td>${artwork.Title}</td>
-          <td> 
-          ${artwork.Featured}
-          </td>
-          <td>
-            ${artwork.Description}
-          </td>
-          <td>
-            ${artwork.Image_url}
-          </td>
-          <td>
-          <a href="/editArtworkPage.html?id=${artwork.id}">
-          <i class="fas fa-edit"></i>
-          </a>
-          </td>
-          <td><i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id=${artwork.id}></i></td>
-        </tr>
+      <div class="admin-body-piece">
+        <div class="featured-piece">
+          <span>Featured</span>
+        </div>
+        <a href="/productDetailsPage.html?id=${artwork.id}">
+            <img src="${artwork.Image_url}" alt="an image of a painting"/>
+        </a>
+        <h2>${artwork.Title}</h2>
+        <div class="admin-tools">
+          <span>$${artwork.Price}.00</span>
+          <div class="admin-tools-two">
+            <a href="/editArtworkPage.html?id=${artwork.id}">
+              <i class="fas fa-edit"></i>
+            </a>
+            <i class="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id=${artwork.id}></i>
+          </div>
+        </div>
+      </div>
       `;
+
+      if (artwork.Featured === null) {
+        document.querySelector(".featured-piece").style.display = "none";
+        artwork.Featured = false;
+      } else {
+      }
     });
 
     let deleteButtons = document.querySelectorAll(".fa-trash-alt");
