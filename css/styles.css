@@ -53,6 +53,10 @@ nav #nav-user {
   cursor: pointer;
 }
 
+nav #nav-admin-user {
+  display: none;
+}
+
 nav .navbar-brand img {
   width: 14rem;
 }
@@ -620,6 +624,7 @@ main .productsDetailsMain .productsDetailsMain-right button {
   font-family: "jost", sans-serif !important;
   letter-spacing: 1.5px !important;
   outline: none !important;
+  width: 12rem;
 }
 
 main .productsDetailsMain .productsDetailsMain-right button:hover {

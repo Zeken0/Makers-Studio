@@ -23,6 +23,7 @@ main {
 
       button {
         @include button;
+        width: 12rem;
       }
 
       button:hover {
