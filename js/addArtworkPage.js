@@ -17,11 +17,11 @@ addForm.onsubmit = async function (event) {
 
   try {
     let newPiece = {
-      title: title.value,
-      price: price.value,
-      image_url: image_url.value,
-      featured: featured.value,
-      description: description.value,
+      Title: title.value,
+      Price: price.value,
+      Image_url: image_url.value,
+      Featured: featured.value,
+      Description: description.value,
     };
 
     let response = await axios.post(
@@ -35,12 +35,12 @@ addForm.onsubmit = async function (event) {
       }
     );
     alert("alert-success", "The art piece has been added successfully!");
+    console.log(response);
     title.value = "";
     price.value = "";
     image_url.value = "";
     featured.value = "";
     description.value = "";
-    console.log(response);
   } catch (error) {
     alert("alert-danger", "An error has occured");
   }
