@@ -32,11 +32,15 @@
   }
 
   .cart-mid {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 2rem;
-    padding: 2rem 0 2rem 0;
     border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+
+    .cart-mid-single {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+      padding: 2rem 0 2rem 0;
+      border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+    }
 
     .cart-mid-left {
       display: flex;
@@ -62,6 +66,7 @@
         height: 15rem;
       }
     }
+
     .cart-mid-center {
       display: flex;
 
@@ -73,6 +78,7 @@
         text-align: center;
       }
     }
+
     .cart-mid-right {
       display: flex;
       justify-content: end;
@@ -172,7 +178,7 @@
       column-gap: 0.7rem !important;
 
       i {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
       }
 
       h2 {

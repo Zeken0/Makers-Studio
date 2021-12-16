@@ -716,6 +716,10 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
 }
 
 .cartMain .cart-mid {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+}
+
+.cartMain .cart-mid .cart-mid-single {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -899,7 +903,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
             column-gap: 0.7rem !important;
   }
   .cartMain .cart-mid-left i {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .cartMain .cart-mid-left h2 {
     font-size: 1rem;
