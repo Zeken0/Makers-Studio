@@ -38,7 +38,7 @@ main {
         justify-content: center;
         align-items: center;
         height: auto;
-        width: 10%;
+        width: 5%;
         margin: 10rem auto 5rem auto;
       }
 
@@ -72,7 +72,7 @@ main {
 @media (max-width: 991px) /*Tablet*/ {
   .products-artworks {
     .loadingGif {
-      width: 15% !important;
+      width: 8% !important;
       margin: 15rem auto 15rem auto !important;
     }
 
@@ -112,7 +112,7 @@ main {
         row-gap: 3rem !important;
 
         .loadingGif {
-          width: 25% !important;
+          width: 15% !important;
           margin: 5rem auto 1.5rem auto !important;
         }
 

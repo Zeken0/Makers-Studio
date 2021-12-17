@@ -183,7 +183,7 @@ nav i {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: 15%;
+  width: 10%;
   margin: 15rem auto 15rem auto;
 }
 
@@ -228,7 +228,7 @@ main .homeMain .featured-products .featured-products-artwork .loadingGifTwo {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: 10%;
+  width: 5%;
   margin: 10rem auto auto auto;
 }
 
@@ -343,14 +343,14 @@ footer .footer-nav li {
     width: 80% !important;
   }
   .loadingGif {
-    width: 15% !important;
+    width: 12% !important;
     margin: 9rem auto 9rem auto !important;
   }
   main {
     margin-bottom: 5rem;
   }
   main .loadingGifTwo {
-    width: 10% !important;
+    width: 8% !important;
     margin: 9rem auto 9rem auto !important;
   }
   main .featured-products-artwork-single {
@@ -387,7 +387,7 @@ footer .footer-nav li {
     width: 100% !important;
   }
   .herobanner .heroBanner-Image .loadingGif {
-    width: 15% !important;
+    width: 12% !important;
     margin: 9.56rem auto 9.56rem auto !important;
   }
   main {
@@ -402,7 +402,7 @@ footer .footer-nav li {
             flex-direction: column;
   }
   main .featured-products-artwork .loadingGifTwo {
-    width: 15% !important;
+    width: 12% !important;
     margin: auto;
   }
   main .featured-products-artwork .featured-products-artwork-single {
@@ -491,7 +491,7 @@ main .productsMain .products-artworks .loadingGif {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  width: 10%;
+  width: 5%;
   margin: 10rem auto 5rem auto;
 }
 
@@ -528,7 +528,7 @@ main .productsMain .products-artworks .products-artwork-single h2 {
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) {
   .products-artworks .loadingGif {
-    width: 15% !important;
+    width: 8% !important;
     margin: 15rem auto 15rem auto !important;
   }
   .products-artworks .products-artwork-single {
@@ -569,7 +569,7 @@ main .productsMain .products-artworks .products-artwork-single h2 {
     row-gap: 3rem !important;
   }
   main .productsMain .products-artworks .loadingGif {
-    width: 25% !important;
+    width: 15% !important;
     margin: 5rem auto 1.5rem auto !important;
   }
   main .productsMain .products-artworks .products-artwork-single {
@@ -1529,7 +1529,7 @@ main .loginMain .container .btn-primary:hover {
     width: 30% !important;
   }
   .adminMain .loadingGif {
-    width: 10% !important;
+    width: 8% !important;
     margin: 15rem auto 15rem auto !important;
   }
   .adminMain .admin-body-piece {
