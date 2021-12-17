@@ -115,7 +115,7 @@
     margin-top: 1.5rem;
 
     img {
-      height: 14.6rem;
+      height: 13rem;
       box-shadow: unset;
     }
 
@@ -125,9 +125,13 @@
     }
 
     form {
+      display: grid;
+      justify-content: center !important;
+      align-content: center !important;
+
       .label-top {
         #title {
-          width: 15rem !important;
+          width: 14rem !important;
         }
 
         #price {
@@ -137,7 +141,7 @@
 
       .label-mid {
         #image_url {
-          width: 15rem;
+          width: 14rem;
         }
 
         #featured {
@@ -146,7 +150,7 @@
       }
 
       #description {
-        width: 21rem;
+        width: 20rem;
       }
 
       button {
@@ -157,7 +161,7 @@
 
   .editArtworkMain {
     img {
-      height: 17.9rem;
+      height: 16.15rem;
     }
   }
 }

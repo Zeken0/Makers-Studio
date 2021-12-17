@@ -891,7 +891,7 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
     width: 25% !important;
   }
   .cart-top .cart-top-right {
-    width: 10% !important;
+    width: 12% !important;
     text-align: right;
   }
   .cartMain {
@@ -1272,7 +1272,7 @@ main .loginMain .container .btn-primary:hover {
   }
   .addArtworkMain img,
   .editArtworkMain img {
-    height: 14.6rem;
+    height: 13rem;
     -webkit-box-shadow: unset;
             box-shadow: unset;
   }
@@ -1281,9 +1281,19 @@ main .loginMain .container .btn-primary:hover {
     text-align: center;
     margin-bottom: 2.5rem;
   }
+  .addArtworkMain form,
+  .editArtworkMain form {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
+  }
   .addArtworkMain form .label-top #title,
   .editArtworkMain form .label-top #title {
-    width: 15rem !important;
+    width: 14rem !important;
   }
   .addArtworkMain form .label-top #price,
   .editArtworkMain form .label-top #price {
@@ -1291,7 +1301,7 @@ main .loginMain .container .btn-primary:hover {
   }
   .addArtworkMain form .label-mid #image_url,
   .editArtworkMain form .label-mid #image_url {
-    width: 15rem;
+    width: 14rem;
   }
   .addArtworkMain form .label-mid #featured,
   .editArtworkMain form .label-mid #featured {
@@ -1299,14 +1309,14 @@ main .loginMain .container .btn-primary:hover {
   }
   .addArtworkMain form #description,
   .editArtworkMain form #description {
-    width: 21rem;
+    width: 20rem;
   }
   .addArtworkMain form button,
   .editArtworkMain form button {
     width: 100% !important;
   }
   .editArtworkMain img {
-    height: 17.9rem;
+    height: 16.15rem;
   }
 }
 
