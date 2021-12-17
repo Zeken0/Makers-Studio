@@ -18,7 +18,9 @@ if (data.length === 0) {
   document.querySelector(".cart-mid").innerHTML = `
     <div class="cart-mid-single">
           <div class="cart-mid-left">
-            The cart is empty!
+            <span>
+              The cart is empty!
+            </span> 
           </div>
           <div class="cart-mid-center">
             <input type="text" aria-label="Quantity" value="-" />
@@ -74,10 +76,16 @@ deleteItemBtn.forEach((deleteBtn) => {
   };
 });
 
-document.querySelector(".cart-btn").onclick = () => {
-  localStorage.removeItem("cart");
-  alert("alert-success", "The art piece has been purchased successfully");
-  setTimeout(() => {
-    window.location = "index.html";
-  }, 4000);
-};
+if (data.length > 0) {
+  document.querySelector(".cart-btn").onclick = () => {
+    alert("alert-success", "The art piece has been purchased successfully!");
+    localStorage.removeItem("cart");
+    setTimeout(() => {
+      window.location = "index.html";
+    }, 4000);
+  };
+} else {
+  document.querySelector(".cart-btn").onclick = () => {
+    alert("alert-info", "Pleas add an item to the cart to checkout!");
+  };
+}
