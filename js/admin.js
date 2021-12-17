@@ -11,7 +11,7 @@ document.querySelector(".admin-btn").onclick = () => {
 
 alert(
   "alert-info",
-  "remember to refresh the page after any edits to see the changes!"
+  "Remember to refresh the page after any edits to see the changes!"
 );
 
 let container = document.querySelector(".admin-body");
