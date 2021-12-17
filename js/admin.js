@@ -9,6 +9,11 @@ document.querySelector(".admin-btn").onclick = () => {
   window.location = "addArtworkPage.html";
 };
 
+alert(
+  "alert-info",
+  "remember to refresh the page after any edits to see the changes!"
+);
+
 let container = document.querySelector(".admin-body");
 
 async function getArtworkAndDeleteArtwork() {
@@ -111,7 +116,6 @@ async function getArtworkAndDeleteArtwork() {
               },
             }
           );
-          console.log(response);
           getArtworkAndDeleteArtwork();
         };
       };

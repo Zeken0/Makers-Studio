@@ -25,7 +25,6 @@ async function getSpecificArtwork() {
     artwork.Featured = false;
   }
 
-  console.log(artwork.Featured);
   title.value = artwork.Title;
   price.value = artwork.Price;
   image_url.value = artwork.Image_url;
@@ -54,10 +53,5 @@ form.onsubmit = async function (event) {
       },
     }
   );
-  alert(
-    "alert-success",
-    "The art piece has been updated successfully! remember to refresh the admin page to see the changes!"
-  );
-
-  console.log(response.data);
+  alert("alert-success", "The art piece has been updated successfully!");
 };
