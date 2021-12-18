@@ -116,6 +116,7 @@ async function getArtworkAndDeleteArtwork() {
               },
             }
           );
+          console.log(response);
           getArtworkAndDeleteArtwork();
         };
       };
