@@ -14,7 +14,7 @@ alert(
   "Remember to refresh the page after any edits to see the changes!"
 );
 
-let container = document.querySelector(".admin-body");
+const container = document.querySelector(".admin-body");
 
 async function getArtworkAndDeleteArtwork() {
   try {
@@ -72,7 +72,7 @@ async function getArtworkAndDeleteArtwork() {
       }
     });
 
-    let deleteButtons = document.querySelectorAll(".fa-trash-alt");
+    const deleteButtons = document.querySelectorAll(".fa-trash-alt");
 
     deleteButtons.forEach(function (deleteButton) {
       deleteButton.onclick = async function () {
@@ -107,7 +107,7 @@ async function getArtworkAndDeleteArtwork() {
         </div>
         `;
         document.querySelector("#confirmButton").onclick = async function () {
-          let response = await axios.delete(
+          const response = await axios.delete(
             `https://makers-studio.herokuapp.com/Products/${deleteButton.dataset.id}`,
             {
               headers: {

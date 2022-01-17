@@ -24,7 +24,7 @@ addForm.onsubmit = async function (event) {
       Description: description.value,
     };
 
-    let response = await axios.post(
+    const response = await axios.post(
       "https://makers-studio.herokuapp.com/Products/",
       newPiece,
       {
