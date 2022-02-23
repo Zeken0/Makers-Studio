@@ -37,6 +37,15 @@ main {
   background-color: $primary-color !important;
   color: white !important;
 }
+
+.loadingGif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 5%;
+  margin: 15rem auto 15rem auto;
+}
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) /*Tablet*/ {
   .productsDetailsMain {

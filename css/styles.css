@@ -641,6 +641,21 @@ main .productsDetailsMain .productsDetailsMain-right button:hover {
   color: white !important;
 }
 
+.loadingGif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 5%;
+  margin: 15rem auto 15rem auto;
+}
+
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 991px) {
   .productsDetailsMain {

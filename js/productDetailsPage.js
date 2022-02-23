@@ -11,6 +11,9 @@ const id = params.get("id");
 
 async function getSingleArtwork(postId) {
   try {
+    document.querySelector(".productsDetailsMain").innerHTML = `
+    <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
+    `;
     const repsonse = await axios.get(
       "https://makers-studio.herokuapp.com/Products/" + postId
     );
@@ -68,6 +71,8 @@ async function getSingleArtwork(postId) {
     };
   } catch (error) {
     alert("alert-danger", "An error has occured");
+  } finally {
+    document.querySelector(".loadingGif").style.display = "none";
   }
 }
 
