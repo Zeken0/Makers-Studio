@@ -35,7 +35,7 @@ async function getSingleArtwork(postId) {
       </div>
     `;
 
-    /* ------------------------------------------ toggleItemInLocalStorage ---------------------------------------------- */
+    /* ----------------------------------------- toggleItemInLocalStorage ---------------------------------------------- */
     let addToCartButton = document.querySelector(
       ".productsDetailsMain-right-btn"
     );
