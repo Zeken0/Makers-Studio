@@ -15,7 +15,7 @@ async function getSingleArtwork(postId) {
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
     const repsonse = await axios.get(
-      "https://makers-studio.onrender.com//Products/" + postId
+      "https://makers-studio.onrender.com/Products/" + postId
     );
     const artwork = await repsonse.data;
     const artworkContainer = document.querySelector(".productsDetailsMain");

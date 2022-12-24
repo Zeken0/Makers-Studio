@@ -9,7 +9,7 @@ async function getAllArtworksData() {
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
     const repsonse = await axios.get(
-      "https://makers-studio.onrender.com//Products/"
+      "https://makers-studio.onrender.com/Products/"
     );
     const data = await repsonse.data;
     let artworks = data;
