@@ -18,7 +18,7 @@ form.onsubmit = async function (event) {
   ) {
     try {
       const { data } = await axios.post(
-        "https://makers-studio.herokuapp.com/auth/local",
+        "https://makers-studio.onrender.com//auth/local",
 
         {
           identifier: email.value,

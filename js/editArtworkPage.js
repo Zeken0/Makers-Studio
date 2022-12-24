@@ -18,7 +18,7 @@ const id = params.get("id");
 
 async function getSpecificArtwork() {
   const repsonse = await axios.get(
-    "https://makers-studio.herokuapp.com/Products/" + id
+    "https://makers-studio.onrender.com/Products/" + id
   );
   const artwork = await repsonse.data;
   if (artwork.Featured === null) {
@@ -44,7 +44,7 @@ form.onsubmit = async function (event) {
   };
 
   const response = await axios.put(
-    `https://makers-studio.herokuapp.com/Products/` + id,
+    `https://makers-studio.onrender.com/Products/` + id,
     updatedPiece,
     {
       headers: {

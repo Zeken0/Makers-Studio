@@ -22,7 +22,7 @@ async function getArtworkAndDeleteArtwork() {
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
     const repsonse = await axios.get(
-      "https://makers-studio.herokuapp.com/Products/"
+      "https://makers-studio.onrender.com/Products/"
     );
     const data = await repsonse.data;
     let artworks = data;
@@ -108,7 +108,7 @@ async function getArtworkAndDeleteArtwork() {
         `;
         document.querySelector("#confirmButton").onclick = async function () {
           const response = await axios.delete(
-            `https://makers-studio.herokuapp.com/Products/${deleteButton.dataset.id}`,
+            `https://makers-studio.onrender.com/Products/${deleteButton.dataset.id}`,
             {
               headers: {
                 "Content-Type": "application/json",

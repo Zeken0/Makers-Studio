@@ -5,7 +5,7 @@ async function getHeroBannerData() {
     document.querySelector(".heroBanner-Image").innerHTML = `
     <img class="loadingGif" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
-    const repsonse = await fetch("https://makers-studio.herokuapp.com/home/");
+    const repsonse = await fetch("https://makers-studio.onrender.com/home/");
     const data = await repsonse.json();
     let heroData = data;
 
@@ -30,7 +30,7 @@ async function getFeaturedArtworksData() {
       <img class="loadingGifTwo" src="/images/Loading-gif.gif" alt="a loading gif">
     `;
     const repsonse = await axios.get(
-      "https://makers-studio.herokuapp.com/Products/"
+      "https://makers-studio.onrender.com/Products/"
     );
     const data = await repsonse.data;
     let featuredData = data;
